@@ -1,0 +1,24 @@
+SAR FSM POST-P&R LOGICAL EQUIVALENCE
+====================================
+
+Reference:
+  build/sar_fsm_ihp_gate.v
+
+Implementation:
+  build/physical/nl/sar_fsm_wrapper.nl.v
+
+Tool:
+  Yosys 0.33
+
+Result:
+  PASS
+
+Equivalence cells:
+  Proven   : 1032
+  Unproven : 0
+
+Yosys return code:
+  0
+
+Conclusion:
+  Post-P&R netlist is formally equivalent to the synthesized reference netlist.
