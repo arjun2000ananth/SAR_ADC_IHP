@@ -1,0 +1,16 @@
+20-Sep-2026 21:11:55 | INFO    | Your Klayout version is: KLayout 0.30.9
+20-Sep-2026 21:11:55 | INFO    | Running SG13CMOS5L LVS checks on design /home/arjun/eda/projects/ADC_IHP/SAR_ADC/circuit_files/sar_adc_test/layout/cdac/cdac_array_10b_diff.gds on cell cdac_array_10b_diff
+20-Sep-2026 21:12:04 | INFO    | ==============================================================================
+20-Sep-2026 21:12:04 | INFO    | Important Summary
+20-Sep-2026 21:12:04 | INFO    | +------------------+-------------------------------------------------------------------------------------------------------------------+
+20-Sep-2026 21:12:04 | INFO    | | Status           | PASS                                                                                                              |
+20-Sep-2026 21:12:04 | INFO    | | Mode             | COMPARE                                                                                                           |
+20-Sep-2026 21:12:04 | INFO    | | Outcome          | Comparison mode: PASS (netlists match).                                                                           |
+20-Sep-2026 21:12:04 | INFO    | | Layout           | cdac_array_10b_diff.gds                                                                                           |
+20-Sep-2026 21:12:04 | INFO    | | Top Cell         | cdac_array_10b_diff                                                                                               |
+20-Sep-2026 21:12:04 | INFO    | | Results Dir      | /home/arjun/eda/projects/ADC_IHP/SAR_ADC/circuit_files/sar_adc_test/layout/cdac/lvs_runs/20260920_211154_ctor7pwp |
+20-Sep-2026 21:12:04 | INFO    | | Warnings         | 0                                                                                                                 |
+20-Sep-2026 21:12:04 | INFO    | | Errors           | 0                                                                                                                 |
+20-Sep-2026 21:12:04 | INFO    | | Run Time (s)     | 10.151                                                                                                            |
+20-Sep-2026 21:12:04 | INFO    | +------------------+-------------------------------------------------------------------------------------------------------------------+
+20-Sep-2026 21:12:04 | INFO    | ==============================================================================

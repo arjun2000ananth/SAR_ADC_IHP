@@ -1,0 +1,72 @@
+# ==============================================================
+# SAR FSM post-P&R logical equivalence
+#
+# GOLD = synthesized / technology-mapped design
+# GATE = final post-route logical netlist
+# ==============================================================
+
+# --------------------------------------------------------------
+# GOLD
+# --------------------------------------------------------------
+
+read_liberty -ignore_miss_func "/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_typ_1p20V_25C.lib"
+read_verilog "/home/arjun/eda/projects/SAR_ADC/circuit_files/src/sar_fsm/build/sar_fsm_ihp_gate.v"
+
+hierarchy -check -top sar_fsm_wrapper
+
+# Expand SG13CMOS5L cells to their logical behavior
+flatten
+proc
+opt_clean
+
+rename sar_fsm_wrapper gold
+
+design -stash gold_design
+
+
+# --------------------------------------------------------------
+# GATE
+# --------------------------------------------------------------
+
+read_liberty -ignore_miss_func "/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_typ_1p20V_25C.lib"
+read_verilog "/home/arjun/eda/projects/SAR_ADC/circuit_files/src/sar_fsm/build/physical/nl/sar_fsm_wrapper.nl.v"
+
+hierarchy -check -top sar_fsm_wrapper
+
+flatten
+proc
+opt_clean
+
+rename sar_fsm_wrapper gate
+
+design -stash gate_design
+
+
+# --------------------------------------------------------------
+# Bring both implementations into one design
+# --------------------------------------------------------------
+
+design -copy-from gold_design gold
+design -copy-from gate_design gate
+
+# --------------------------------------------------------------
+# Build equivalence circuit
+# --------------------------------------------------------------
+
+
+# Convert async-reset FFs to SAT-friendly synchronous model
+async2sync
+opt_clean
+
+equiv_make -inames gold gate equiv
+
+hierarchy -check -top equiv
+
+# First prove easy / structural equivalence points.
+equiv_simple -undef -seq 20
+
+# Then temporal induction for sequential logic.
+equiv_induct -undef -seq 20
+
+# FAIL Yosys if anything remains unproven.
+equiv_status -assert
