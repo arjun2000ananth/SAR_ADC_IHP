@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-SAR ADC Python testbench runner.
+SAR ADC Python testbench runer.
 
     python run.py list
     python run.py comparator                       # one bench
     python run.py comparator --dut simple_comparator
-    python run.py blocks                           # every block bench (no FSM needed)
+    python run.py blocks                           # every block bench
     python run.py adc                              # adc_timing + adc_static + adc_dynamic
     python run.py all
     python run.py selftest                         # full-ADC flow with the bundled reference FSM
@@ -163,7 +163,7 @@ def main(argv=None):
             summary.append((pt, *run_one(n, args, extra, over)))
         args.tag = tag0
 
-    print("\n==================== summary ====================")
+    print("\nsummary")
     for pt, n, st, _ in summary:
         print(f"  {n:<16} {'' if pt is None else pt!s:<24} {st}")
     if args.pvt:
