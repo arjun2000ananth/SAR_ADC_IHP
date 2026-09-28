@@ -44,7 +44,6 @@ NETLISTS = [
     "{HERE}/netlists/simple_comparator.spice",
     "{HERE}/netlists/level_shifter_1v2_to_3v3.spice",
     "{HERE}/netlists/capDrivers.spice",
-    "{HERE}/netlists/DFF_array2.spice",
 ]
 # Gate-level SAR FSM (Yosys  spice).  REQUIRED for the fsm / adc_* benches.
 FSM_NETLIST = "{HERE}/netlists/sar_fsm_wrapper_ihp.spice"

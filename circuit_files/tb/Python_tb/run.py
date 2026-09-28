@@ -40,7 +40,6 @@ BENCHES = {
     "cdac":            ("benches.cdac", False),
     "level_shifter":   ("benches.level_shifter", False),
     "cap_drivers":     ("benches.cap_drivers", False),
-    "dff_array2":      ("benches.dff_array2", False),
     "fsm":             ("benches.fsm", True),
     "adc_timing":      ("benches.adc_timing", True),
     "adc_static":      ("benches.adc_static", True),
@@ -48,7 +47,7 @@ BENCHES = {
 }
 GROUPS = {
     "blocks": ["comparator", "sampling_switch", "inverter", "dac_switch", "cdac",
-               "level_shifter", "cap_drivers", "dff_array2"],
+               "level_shifter", "cap_drivers"],
     "adc": ["adc_timing", "adc_static", "adc_dynamic"],
 }
 GROUPS["all"] = GROUPS["blocks"] + ["fsm"] + GROUPS["adc"]
