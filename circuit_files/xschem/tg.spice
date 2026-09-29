@@ -1,0 +1,21 @@
+* NGSPICE file created from tg.ext - technology: ihp-sg13g2
+
+.subckt tg vss ng pg vdd a b
+X0 b ng a vss sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X1 b pg a vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X2 b pg a vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+C0 b ng 0.18684f
+C1 pg a 0.66373f
+C2 vdd ng 0.01477f
+C3 b vdd 0.56413f
+C4 pg ng 0.00105f
+C5 a ng 1.90771f
+C6 pg b 1.5784f
+C7 b a 0.99823f
+C8 pg vdd 2.20436f
+C9 a vdd 0.7785f
+C10 b vss 2.78264f
+C11 a vss 2.5797f
+C12 vdd vss 0.96243f
+.ends
+
