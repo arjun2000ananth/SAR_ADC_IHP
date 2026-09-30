@@ -1,0 +1,192 @@
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/sar_10_bit.sch
+.subckt sar_10_bit RSTN busy START valid vcm vrefp ainn ainp CLK C0 C9 C1 C5 C6 C2 C7 C3 C8 C4 vss vddh Voutn vddl
+*.PININFO ainn:I ainp:I CLK:I vrefp:I vcm:I C1:O C2:O C3:O C4:O C5:O C6:O C7:O C8:O C0:O C9:O busy:O valid:O START:I RSTN:I
+*+ Voutn:B vddh:B vss:B vddl:B
+x1 voutn_raw vcn voutp_raw vcp vddh vss comp_clk_hv strong_arm_comp
+x3 vss sample_hv sampleb_hv vddh ainp vcp tg
+x4 vss sample_hv sampleb_hv vddh ainn vcn tg
+x15 vddh sample_hv sampleb_hv vss inverter
+x6 dbp0_hv bp0 vss vddh vrefp vcm dac_sw_2to1_tg
+x7 dbp1_hv bp1 vss vddh vrefp vcm dac_sw_2to1_tg
+x8 dbp4_hv bp4 vss vddh vrefp vcm dac_sw_2to1_tg
+x9 dbp5_hv bp5 vss vddh vrefp vcm dac_sw_2to1_tg
+x10 dbp7_hv bp7 vss vddh vrefp vcm dac_sw_2to1_tg
+x11 dbp8_hv bp8 vss vddh vrefp vcm dac_sw_2to1_tg
+x12 dbp2_hv bp2 vss vddh vrefp vcm dac_sw_2to1_tg
+x13 dbp3_hv bp3 vss vddh vrefp vcm dac_sw_2to1_tg
+x14 dbp6_hv bp6 vss vddh vrefp vcm dac_sw_2to1_tg
+x16 dbp9_hv bp9 vss vddh vrefp vcm dac_sw_2to1_tg
+x17 dbn0_hv bn0 vss vddh vrefp vcm dac_sw_2to1_tg
+x18 dbn1_hv bn1 vss vddh vrefp vcm dac_sw_2to1_tg
+x19 dbn4_hv bn4 vss vddh vrefp vcm dac_sw_2to1_tg
+x20 dbn5_hv bn5 vss vddh vrefp vcm dac_sw_2to1_tg
+x21 dbn7_hv bn7 vss vddh vrefp vcm dac_sw_2to1_tg
+x22 dbn8_hv bn8 vss vddh vrefp vcm dac_sw_2to1_tg
+x23 dbn2_hv bn2 vss vddh vrefp vcm dac_sw_2to1_tg
+x24 dbn3_hv bn3 vss vddh vrefp vcm dac_sw_2to1_tg
+x25 dbn6_hv bn6 vss vddh vrefp vcm dac_sw_2to1_tg
+x27 dbn9_hv bn9 vss vddh vrefp vcm dac_sw_2to1_tg
+x5 CLK RSTN START comp_lv sample comp_clk busy valid dbp9 dbp8 dbp7 dbp6 dbp5 dbp4 dbp3 dbp2 dbp1 dbp0 dbn9 dbn8 dbn7 dbn6 dbn5
++ dbn4 dbn3 dbn2 dbn1 dbn0 C9 C8 C7 C6 C5 C4 C3 C2 C1 C0 vddl vss sar_fsm_wrapper
+x26 vss vddl vddh comp_lv voutp_raw voutn_raw comp_clk_hv level_shifter_3v3_to_1v2
+x28 vss vddl vddh comp_clk_hv comp_clk level_shifter_1v2_to_3v3
+x29 vss vddl vddh sample_hv sample level_shifter_1v2_to_3v3
+x30 vss vddl vddh dbp0_hv dbp0 level_shifter_1v2_to_3v3
+x31 vss vddl vddh dbp1_hv dbp1 level_shifter_1v2_to_3v3
+x32 vss vddl vddh dbp5_hv dbp5 level_shifter_1v2_to_3v3
+x33 vss vddl vddh dbp6_hv dbp6 level_shifter_1v2_to_3v3
+x34 vss vddl vddh dbp2_hv dbp2 level_shifter_1v2_to_3v3
+x35 vss vddl vddh dbp3_hv dbp3 level_shifter_1v2_to_3v3
+x36 vss vddl vddh dbp7_hv dbp7 level_shifter_1v2_to_3v3
+x37 vss vddl vddh dbp8_hv dbp8 level_shifter_1v2_to_3v3
+x38 vss vddl vddh dbp4_hv dbp4 level_shifter_1v2_to_3v3
+x39 vss vddl vddh dbp9_hv dbp9 level_shifter_1v2_to_3v3
+x40 vss vddl vddh dbn0_hv dbn0 level_shifter_1v2_to_3v3
+x41 vss vddl vddh dbn1_hv dbn1 level_shifter_1v2_to_3v3
+x42 vss vddl vddh dbn5_hv dbn5 level_shifter_1v2_to_3v3
+x43 vss vddl vddh dbn6_hv dbn6 level_shifter_1v2_to_3v3
+x44 vss vddl vddh dbn2_hv dbn2 level_shifter_1v2_to_3v3
+x45 vss vddl vddh dbn3_hv dbn3 level_shifter_1v2_to_3v3
+x46 vss vddl vddh dbn7_hv dbn7 level_shifter_1v2_to_3v3
+x47 vss vddl vddh dbn8_hv dbn8 level_shifter_1v2_to_3v3
+x48 vss vddl vddh dbn4_hv dbn4 level_shifter_1v2_to_3v3
+x49 vss vddl vddh dbn9_hv dbn9 level_shifter_1v2_to_3v3
+x50 vddh voutn_raw Voutn vss inverter
+x51 vddh voutp_raw Voutp_dummy vss inverter
+x52 vcp bp3 bp0 bp5 bp2 vcm bp1 bp7 bp6 bp8 bp4 bp9 vcn bn0 bn1 bn8 bn7 bn6 bn5 bn4 bn3 bn9 bn2 vcm cdac_caps_10b_diff
+.ends
+
+* expanding   symbol:  strong_arm_comp.sym # of pins=7
+** sym_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/strong_arm_comp.sym
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/strong_arm_comp.sch
+.subckt strong_arm_comp Voutn Vinn Voutp Vinp vdd vss CLK
+*.PININFO Vinn:I Voutp:O vdd:B Vinp:I CLK:I vss:B Voutn:O
+MM1 P CLK vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=4
+MM2 net1 CLK vss vss sg13_hv_nmos w=2u l=0.45u ng=1 m=8
+MM3 X CLK vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=4
+MM4 P Vinn net1 vss sg13_hv_nmos w=2u l=0.45u ng=1 m=6
+MM5 Q Vinp net1 vss sg13_hv_nmos w=2u l=0.45u ng=1 m=6
+MM6 X Y P vss sg13_hv_nmos w=2u l=0.45u ng=1 m=2
+MM7 Y X Q vss sg13_hv_nmos w=2u l=0.45u ng=1 m=2
+MM8 X Y vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=4
+MM9 Y CLK vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=4
+MM10 Q CLK vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=4
+MM11 Y X vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=4
+MM12 net2 X vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM13 Voutp net2 vss vss sg13_hv_nmos w=2u l=0.45u ng=1 m=2
+MM14 Voutn net3 vss vss sg13_hv_nmos w=2u l=0.45u ng=1 m=2
+MM15 net3 Y vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM16 net2 X vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM17 Voutp Voutn vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=4
+MM18 net3 Y vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM19 Voutn Voutp vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=4
+.ends
+
+
+* expanding   symbol:  tg.sym # of pins=6
+** sym_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/tg.sym
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/tg.sch
+.subckt tg vss ng pg vdd a b
+*.PININFO ng:I vdd:B pg:I a:B b:B vss:B
+MM12 b ng a vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM16 b pg a vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+.ends
+
+
+* expanding   symbol:  inverter.sym # of pins=4
+** sym_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/inverter.sym
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/inverter.sch
+.subckt inverter vdd Vinn Voutp vss
+*.PININFO vdd:B vss:B Vinn:I Voutp:O
+MM12 Voutp Vinn vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM16 Voutp Vinn vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+.ends
+
+
+* expanding   symbol:  dac_sw_2to1_tg.sym # of pins=6
+** sym_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/dac_sw_2to1_tg.sym
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/dac_sw_2to1_tg.sch
+.subckt dac_sw_2to1_tg sel out vss vdd vref vcm
+*.PININFO sel:I vdd:B vref:B vcm:B vss:B out:B
+x1 vss sel selb vdd vref out tg
+x3 vss selb sel vdd vcm out tg
+x2 vdd sel selb vss inverter
+.ends
+
+
+* expanding   symbol:  level_shifter_3v3_to_1v2.sym # of pins=7
+** sym_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/level_shifter_3v3_to_1v2.sym
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/level_shifter_3v3_to_1v2.sch
+.subckt level_shifter_3v3_to_1v2 vss vddl vddh out inp inn en_hv
+*.PININFO vddl:B out:B vss:B inp:B inn:B en_hv:B vddh:B
+MM7 q vddl xp vss sg13_hv_nmos w=2u l=0.45u ng=1 m=4
+MM9 xp gatep vss vss sg13_hv_nmos w=2u l=0.45u ng=1 m=4
+MM8 qb vddl xn vss sg13_hv_nmos w=2u l=0.45u ng=1 m=4
+MM11 xn gaten vss vss sg13_hv_nmos w=2u l=0.45u ng=1 m=4
+MM17 lvbuf hbuf2 vss vss sg13_lv_nmos w=0.6u l=0.13u ng=1
+MM18 lvbuf hbuf2 vddl vddl sg13_lv_pmos w=1.2u l=0.13u ng=1
+MM3 q qb vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM4 qb q vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM5 qb q vddl vddl sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM6 q qb vddl vddl sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM14 hbuf qb vddl vddl sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM15 hbuf qb vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM19 hbuf2 hbuf vddl vddl sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM20 hbuf2 hbuf vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM21 out lvbuf vss vss sg13_lv_nmos w=0.6u l=0.13u ng=1
+MM22 out lvbuf vddl vddl sg13_lv_pmos w=1.2u l=0.13u ng=1
+MM23 enb en_hv vddh vddh sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM24 enb en_hv vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+x1 vss en_hv enb vddh inp gatep tg
+x2 vss en_hv enb vddh inn gaten tg
+MM25 gatep enb vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM26 gaten enb vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+.ends
+
+
+* expanding   symbol:  level_shifter_1v2_to_3v3.sym # of pins=5
+** sym_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/level_shifter_1v2_to_3v3.sym
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/level_shifter_1v2_to_3v3.sch
+.subckt level_shifter_1v2_to_3v3 vss vddl vddh out in
+*.PININFO vddl:B vddh:B out:B vss:B in:B
+MM1 inb in vss vss sg13_lv_nmos w=0.6u l=0.13u ng=1
+MM2 inb in vddl vddl sg13_lv_pmos w=1.2u l=0.13u ng=1
+MM3 a in vss vss sg13_hv_nmos w=2u l=0.45u ng=1 m=4
+MM4 b inb vss vss sg13_hv_nmos w=2u l=0.45u ng=1 m=4
+MM5 b a vddh vddh sg13_hv_pmos w=2u l=0.4u ng=1
+MM6 a b vddh vddh sg13_hv_pmos w=2u l=0.4u ng=1
+MM12 out a vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM16 out a vddh vddh sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+.ends
+
+
+* expanding   symbol:  cdac_caps_10b_diff.sym # of pins=24
+** sym_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/cdac_caps_10b_diff.sym
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/cdac_caps_10b_diff.sch
+.subckt cdac_caps_10b_diff vcp bp3 bp0 bp5 bp2 bpd bp1 bp7 bp6 bp8 bp4 bp9 vcn bn0 bn1 bn8 bn7 bn6 bn5 bn4 bn3 bn9 bn2 bnd
+*.PININFO vcp:B vcn:B bpd:B bp0:B bp1:B bp2:B bp3:B bp4:B bp5:B bp6:B bp7:B bp8:B bp9:B bnd:B bn1:B bn2:B bn3:B bn4:B bn5:B bn6:B
+*+ bn7:B bn8:B bn9:B bn0:B
+CC1 vcp bpd cap_cmomi w=2.67e-6 l=2.52e-6
+CC2 vcp bp0 cap_cmomi w=2.67e-6 l=2.52e-6
+CC3 vcp bp1 cap_cmomi w=2.67e-6 l=2.52e-6 m=2
+CC4 vcp bp2 cap_cmomi w=2.67e-6 l=2.52e-6 m=4
+CC5 vcp bp3 cap_cmomi w=2.67e-6 l=2.52e-6 m=8
+CC6 vcp bp4 cap_cmomi w=2.67e-6 l=2.52e-6 m=16
+CC7 vcp bp5 cap_cmomi w=2.67e-6 l=2.52e-6 m=32
+CC8 vcp bp6 cap_cmomi w=2.67e-6 l=2.52e-6 m=64
+CC9 vcp bp7 cap_cmomi w=2.67e-6 l=2.52e-6 m=128
+CC10 vcp bp8 cap_cmomi w=2.67e-6 l=2.52e-6 m=256
+CC12 vcp bp9 cap_cmomi w=2.67e-6 l=2.52e-6 m=512
+CC11 vcn bnd cap_cmomi w=2.67e-6 l=2.52e-6
+CC13 vcn bn0 cap_cmomi w=2.67e-6 l=2.52e-6
+CC14 vcn bn1 cap_cmomi w=2.67e-6 l=2.52e-6 m=2
+CC15 vcn bn2 cap_cmomi w=2.67e-6 l=2.52e-6 m=4
+CC16 vcn bn3 cap_cmomi w=2.67e-6 l=2.52e-6 m=8
+CC17 vcn bn4 cap_cmomi w=2.67e-6 l=2.52e-6 m=16
+CC18 vcn bn5 cap_cmomi w=2.67e-6 l=2.52e-6 m=32
+CC19 vcn bn6 cap_cmomi w=2.67e-6 l=2.52e-6 m=64
+CC20 vcn bn7 cap_cmomi w=2.67e-6 l=2.52e-6 m=128
+CC21 vcn bn8 cap_cmomi w=2.67e-6 l=2.52e-6 m=256
+CC22 vcn bn9 cap_cmomi w=2.67e-6 l=2.52e-6 m=512
+.ends
+

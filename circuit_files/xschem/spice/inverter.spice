@@ -1,0 +1,6 @@
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/inverter.sch
+.subckt inverter vdd Vinn Voutp vss
+*.PININFO vdd:B vss:B Vinn:I Voutp:O
+MM12 Voutp Vinn vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM16 Voutp Vinn vdd vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+.ends

@@ -1,0 +1,27 @@
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/cdac_array_10b_diff.sch
+.subckt cdac_array_10b_diff vcp vcn bpd bp0 bp1 bp2 bp3 bp4 bp5 bp6 bp7 bp8 bp9 bnd bn1 bn2 bn3 bn4 bn5 bn6 bn7 bn8 bn9 bn0
+*.PININFO vcp:B vcn:B bpd:B bp0:B bp1:B bp2:B bp3:B bp4:B bp5:B bp6:B bp7:B bp8:B bp9:B bnd:B bn1:B bn2:B bn3:B bn4:B bn5:B bn6:B
+*+ bn7:B bn8:B bn9:B bn0:B
+CC1 vcp bpd cap_cmomi w=2.67e-6 l=2.52e-6
+CC2 vcp bp0 cap_cmomi w=2.67e-6 l=2.52e-6
+CC3 vcp bp1 cap_cmomi w=2.67e-6 l=2.52e-6 m=2
+CC4 vcp bp2 cap_cmomi w=2.67e-6 l=2.52e-6 m=4
+CC5 vcp bp3 cap_cmomi w=2.67e-6 l=2.52e-6 m=8
+CC6 vcp bp4 cap_cmomi w=2.67e-6 l=2.52e-6 m=16
+CC7 vcp bp5 cap_cmomi w=2.67e-6 l=2.52e-6 m=32
+CC8 vcp bp6 cap_cmomi w=2.67e-6 l=2.52e-6 m=64
+CC9 vcp bp7 cap_cmomi w=2.67e-6 l=2.52e-6 m=128
+CC10 vcp bp8 cap_cmomi w=2.67e-6 l=2.52e-6 m=256
+CC12 vcp bp9 cap_cmomi w=2.67e-6 l=2.52e-6 m=512
+CC11 vcn bnd cap_cmomi w=2.67e-6 l=2.52e-6
+CC13 vcn bn0 cap_cmomi w=2.67e-6 l=2.52e-6
+CC14 vcn bn1 cap_cmomi w=2.67e-6 l=2.52e-6 m=2
+CC15 vcn bn2 cap_cmomi w=2.67e-6 l=2.52e-6 m=4
+CC16 vcn bn3 cap_cmomi w=2.67e-6 l=2.52e-6 m=8
+CC17 vcn bn4 cap_cmomi w=2.67e-6 l=2.52e-6 m=16
+CC18 vcn bn5 cap_cmomi w=2.67e-6 l=2.52e-6 m=32
+CC19 vcn bn6 cap_cmomi w=2.67e-6 l=2.52e-6 m=64
+CC20 vcn bn7 cap_cmomi w=2.67e-6 l=2.52e-6 m=128
+CC21 vcn bn8 cap_cmomi w=2.67e-6 l=2.52e-6 m=256
+CC22 vcn bn9 cap_cmomi w=2.67e-6 l=2.52e-6 m=512
+.ends

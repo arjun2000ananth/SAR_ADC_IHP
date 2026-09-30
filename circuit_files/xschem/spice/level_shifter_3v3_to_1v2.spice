@@ -1,0 +1,36 @@
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/level_shifter_3v3_to_1v2.sch
+.subckt level_shifter_3v3_to_1v2 vss vddl vddh out inp inn en_hv
+*.PININFO vddl:B out:B vss:B inp:B inn:B en_hv:B vddh:B
+MM7 q vddl xp vss sg13_hv_nmos w=2u l=0.45u ng=1 m=4
+MM9 xp gatep vss vss sg13_hv_nmos w=2u l=0.45u ng=1 m=4
+MM8 qb vddl xn vss sg13_hv_nmos w=2u l=0.45u ng=1 m=4
+MM11 xn gaten vss vss sg13_hv_nmos w=2u l=0.45u ng=1 m=4
+MM17 lvbuf hbuf2 vss vss sg13_lv_nmos w=0.6u l=0.13u ng=1
+MM18 lvbuf hbuf2 vddl vddl sg13_lv_pmos w=1.2u l=0.13u ng=1
+MM3 q qb vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM4 qb q vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM5 qb q vddl vddl sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM6 q qb vddl vddl sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM14 hbuf qb vddl vddl sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM15 hbuf qb vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM19 hbuf2 hbuf vddl vddl sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM20 hbuf2 hbuf vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM21 out lvbuf vss vss sg13_lv_nmos w=0.6u l=0.13u ng=1
+MM22 out lvbuf vddl vddl sg13_lv_pmos w=1.2u l=0.13u ng=1
+MM23 enb en_hv vddh vddh sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+MM24 enb en_hv vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+x1 vss en_hv enb vddh inp gatep tg
+x2 vss en_hv enb vddh inn gaten tg
+MM25 gatep enb vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM26 gaten enb vss vss sg13_hv_nmos w=2u l=0.45u ng=1
+.ends
+
+* expanding   symbol:  tg.sym # of pins=6
+** sym_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/tg.sym
+** sch_path: /home/arjun/eda/projects/SAR_ADC/circuit_files/sar_adc_test/xschem/tg.sch
+.subckt tg vss ng pg vdd a b
+*.PININFO ng:I vdd:B pg:I a:B b:B vss:B
+MM12 b ng a vss sg13_hv_nmos w=2u l=0.45u ng=1
+MM16 b pg a vdd sg13_hv_pmos w=2u l=0.4u ng=1 m=2
+.ends
+
