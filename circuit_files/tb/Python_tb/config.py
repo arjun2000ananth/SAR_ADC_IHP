@@ -71,7 +71,7 @@ VFS_DIFF = None
 
 # Clocks / ADC control (matches sar_10_bit_tb.spice)
 
-FCLK = 50e6              # CLK frequency
+FCLK = 64e6              # CLK frequency
 T_EDGE = 20e-12          # rise/fall of ideal digital sources
 T_RSTN = 60e-9           # RSTN released at this time
 START_PHASE = 0.5        # START rises this fraction of a CLK period after a CLK rising edge
