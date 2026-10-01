@@ -248,10 +248,6 @@ Verification logs are available under:
 chipalooza/slot_16/verification/
 ```
 
-The standalone slot-level density result is retained separately from the main DRC result.
-
-The Chipalooza harness performs additional fill as part of the full-chip integration flow. Sensitive CDAC and comparator regions are protected from inappropriate fill to avoid affecting analog performance.
-
 ---
 
 # Target Performance
@@ -269,10 +265,6 @@ The Chipalooza harness performs additional fill as part of the full-chip integra
 | Input type | Differential |
 | Digital result | 10-bit parallel code |
 | Status outputs | `busy`, `valid` |
-
-These values are design targets unless explicitly identified as post-layout or measured results.
-
-Final silicon performance will be characterized after fabrication.
 
 ---
 
