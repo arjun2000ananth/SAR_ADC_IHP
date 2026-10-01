@@ -1,0 +1,1 @@
+DRC slot_16: tool_ok=True violations=4 {'GFil.g': 1, 'M1.j': 1, 'M2.j': 1, 'TM1.c': 1} (45.9 s) -> /home/arjun/eda/projects/SAR_ADC/chipalooza/slot_16/verification/drc/slot_16_density

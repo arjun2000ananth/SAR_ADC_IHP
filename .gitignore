@@ -3,3 +3,5 @@ __pycache__/
 IHP-Open-PDK/
 sim_build/
 final/
+sg13cmos5l_ocd_chipalooza/
+chipalooza/slot_16/layout/slot_16_in_wrapper.gds

@@ -1,154 +1,425 @@
-# 10-Bit SAR ADC — Chipalooza Challenge
+# 10-Bit SAR ADC — IHP SG13CMOS5L
 
-Mixed-signal IP: a 1 MS/s, 10-bit differential-input successive-approximation-register ADC, targeting the IHP SG13CMOS5L 130nm process.
+A fully differential 10-bit successive-approximation-register (SAR) ADC designed in the **IHP SG13CMOS5L** process for the **Chipalooza Challenge**.
+
+The repository contains the transistor-level analog design, SAR control logic, block-level and top-level layout, post-layout verification, and the final integration into **Chipalooza slot 16**.
+
+The ADC targets approximately **1 MS/s** operation and uses separate **3.3 V analog/high-voltage** and **1.2 V digital/low-voltage** supply domains.
+
+---
 
 ## Team
 
-| Name | Email |
+| Name | Role |
 |---|---|
-| Arjun Ananth | arjunananth200@gmail.com |
-| Man Yu | manyu@manyu.xyz |
-| Kelvin Olonade | olonadekelvin@gmail.com |
+| Arjun Ananth | Lead Designer — Design & Layout |
+| Man Yu | Verification |
+| Kelvin Olonade | Verification Support |
+
+---
 
 ## Overview
 
-- **IP type:** Mixed-signal — 1 MS/s, 10-bit differential-input SAR ADC
-- **Target process:** IHP SG13CMOS5L
-- **Application:** Reusable converter for sensor interfaces, monitoring circuits, and general-purpose SoC integration
+The ADC uses a fully differential charge-redistribution SAR architecture.
 
-## Block Diagram
+Main blocks:
+
+- Differential input sampling network
+- Fully differential 10-bit capacitive DAC
+- Strong-arm dynamic comparator with latch
+- 1.2 V ↔ 3.3 V level shifters
+- SAR finite-state machine
+- Digital conversion outputs and status signals
+
+
+block diagram:
 
 ![Block Diagram](docs/Block_Diagram.png)
 
-Signal path: differential input (`vin_p`/`vin_n`) → bootstrapped-switch sample & hold → 10-bit split-array CDAC (charge redistribution) → dynamic-latch comparator → 1.2V↔3.3V level shifters → SAR sequencer → output register (`adc_data[9:0]`, status flags) → digital interface. A 1.2V bandgap reference network supplies `vref_p` / `vref_n` / `vcm` to the CDAC and sample-and-hold.
+---
 
 ## Architecture
 
-- Active differential input sampling
-- Dynamic comparator
-- Differential capacitive DAC (VCM-based monotonic switching)
-- SAR control logic
-- Digital calibration (optional)
-- Output register and conversion-status logic
-- SPI output interface
-- Pipelined operation (if needed)
+The ADC consists of the following main blocks:
+
+### Sampling Network
+
+The differential input is sampled onto the CDAC before the SAR conversion begins.
+
+### Capacitive DAC
+
+A fully differential 10-bit capacitive DAC performs the successive-approximation charge redistribution. The CDAC uses a common-mode based differential switching scheme and is implemented using SG13CMOS5L MOM capacitors.
+
+### Comparator
+
+A strong-arm dynamic comparator performs the bit decisions during conversion.
+
+### Level Shifters
+
+The analog circuitry operates primarily from the 3.3 V domain while the SAR controller operates at 1.2 V. Level shifters provide the required voltage-domain crossings between the digital controller and the analog switching circuitry.
+
+### SAR Controller
+
+The SAR controller is implemented as a synthesized FSM operating in the 1.2 V domain.
+
+It controls:
+
+- Sampling
+- Comparator timing
+- CDAC bit decisions
+- Conversion sequencing
+- `busy`
+- `valid`
+- Final 10-bit output code
+
+---
 
 ## Conversion Sequence
 
-1. Differential input sampled onto the CDAC
-2. Input sampling switches open
-3. SAR controller applies the MSB trial code to the DAC
-4. Comparator resolves the polarity of the DAC residue
-5. Result stored; steps 3–4 repeat for the remaining bits
-6. Final 10-bit code transferred to the output register
-7. End-of-conversion status flag asserted
-8. Result read out over SPI
+A conversion proceeds as follows:
 
-## Pinout
+1. The differential input is sampled onto the CDAC.
+2. The sampling switches open.
+3. The SAR controller applies the MSB trial decision.
+4. The comparator resolves the differential DAC residue.
+5. The decision is stored.
+6. Steps 3–5 repeat for the remaining bits.
+7. The final 10-bit result is presented on `C[9:0]`.
+8. `valid` is asserted when the result is available.
 
-| Analog I/O & refs | Supplies | Digital inputs | Digital outputs |
-|---|---|---|---|
-| Vinp | Vdda – 3.3V | Enable | SPI (4 pins) |
-| Vinn | Vssa – 0V | Start | Test points for MSBs (optional) |
-| Vref_p | Vddd – 1.2V | Clk | Comp_test |
-| Vref_n | Vssd – 0V | Reset_n | |
-| Vcm | | test_mode | |
-| | | iDAC[4:0] | |
+`busy` indicates that a conversion is currently in progress.
 
-Up to 16 digital control/test signals over a simple SPI control/status bus.
+---
 
-## Target Specifications
+## Supply Domains
 
-| Parameter | Min | Nominal | Max |
-|---|---|---|---|
-| Resolution | | 10 bits | |
-| ENOB | 9 bits | | |
-| Sampling rate | | 1 MS/s | |
-| SAR clock | | 15 MHz | |
-| Conversion cycles | 12 | | 14 |
-| DNL | | | ±1 LSB |
-| INL | | | ±1 LSB |
-| Offset error | | | ±2 LSB |
-| Gain error | | | 1% of FS |
-| Total error | No missing codes (nominal) | | ±3 LSB |
-| Input leakage | | | 200 nA |
-| SFDR | 60 dB | | |
-| SNDR | 55 dB | | |
-| SNR | 55 dB | | |
-| Input bandwidth | | 500 kHz | |
-| Comparator input-referred noise | | | 250 µV RMS |
-| CDAC settling error | | | 0.25 LSB |
-| Power consumption | | | 5 mW |
+| Domain | Nominal Voltage | Usage |
+|---|---:|---|
+| `vddh` | 3.3 V | Analog / high-voltage circuitry |
+| `vddl` | 1.2 V | SAR FSM and low-voltage digital circuitry |
+| `vss` | 0 V | Common ground |
 
-## Verification Plan
+---
 
-Top-level checks: schematic-level transient sim, static code-density sim, PVT-corner sim, extracted post-layout sim, DRC/LVS, and mixed-signal full-conversion sim.
+## SAR ADC Interface
 
-- **Sampling front-end** — charge injection, clock feedthrough, leakage/droop, linearity (THD/SNDR/SFDR at 10k/100k/250kHz and near Nyquist)
-- **Comparator** — decision polarity, input-referred offset, transition point, noise histogram, metastability probability, decision-time across corners
-- **CDAC** — unit-cap nominal + mismatch (Monte Carlo), parasitic extraction, full 1024-code sweep for DNL/INL, boundary and settling behavior
-- **SAR control** — FSM state/transition coverage, assertions, toggle coverage, timing
-- **Level shifters** — 1.2V↔3.3V transitions, cross-domain delay from SAR output through the shifter and bootstrap switch to CDAC settling
-- **Full ADC** — ramp-based DNL/INL/missing-code check; near-full-scale sine for SFDR/SNDR/SNR/ENOB; input leakage, bandwidth, and power (max/average/standby)
+The reusable `sar_10_bit` ADC macro has the following interface.
 
-**Silicon bring-up:** continuity check → apply 1.2V/3.3V supplies → hold in reset → measure static current → enable and check reset behavior → enable clock, apply mid-scale input, trigger a conversion → sweep zero/mid/full-scale → DC transfer-function ramp (~10 hits/code) → sample-rate sweep → hot/cold corner test.
+### Analog and Supply Pins
 
-**Success criteria:** functional 10-bit conversion, no missing codes, ENOB ≥ 9 bits, SFDR/SNDR meeting spec, at 1 MSps.
+| Signal | Direction | Description |
+|---|---|---|
+| `ainp` | Input | Positive differential analog input |
+| `ainn` | Input | Negative differential analog input |
+| `vrefp` | Input | CDAC reference voltage |
+| `vcm` | Input | Common-mode voltage |
+| `Voutn` | Output | Comparator/debug analog output |
+| `vddh` | Supply | 3.3 V supply |
+| `vddl` | Supply | 1.2 V supply |
+| `vss` | Supply | Ground |
 
-## Required Lab Equipment
+### Digital Control Pins
 
-- DC power supplies
-- Voltage reference source
-- Differential signal generator
-- Digital clock generator
-- Oscilloscope
-- Digital multimeter
+| Signal | Direction | Description |
+|---|---|---|
+| `CLK` | Input | SAR conversion clock |
+| `START` | Input | Starts a conversion |
+| `RSTN` | Input | Active-low reset |
 
-## Repository Layout
+### Digital Outputs
 
+| Signal | Direction | Description |
+|---|---|---|
+| `C0`–`C9` | Output | 10-bit conversion result |
+| `busy` | Output | Conversion in progress |
+| `valid` | Output | Conversion result valid |
+
+---
+
+# Chipalooza Integration
+
+This project is assigned to **slot 16** of the IHP SG13CMOS5L Chipalooza test chip. The reusable ADC and the Chipalooza implementation are kept separate.
+
+
+The final harness-compatible GDS is:
+```text
+final/gds/slot_16.gds
 ```
+
+The `sar_10_bit` cell remains the reusable ADC macro and can be integrated independently into other designs.
+
+---
+
+## Slot-16 Signal Mapping
+
+### Analog Inputs and References
+
+| Chipalooza Signal | ADC Signal | Function |
+|---|---|---|
+| `s16_an[0]` | `ainp` | Positive differential input |
+| `s16_an[1]` | `ainn` | Negative differential input |
+| `analog_bus0` | `vrefp` | ADC reference voltage |
+| `analog_bus1` | `vcm` | ADC common-mode voltage |
+
+### Supplies
+
+| Chipalooza Signal | ADC Signal |
+|---|---|
+| `vdd_3v3` | `vddh` |
+| `vdd_1v2` | `vddl` |
+| Ground network | `vss` |
+
+### Control
+
+| Chipalooza Signal | ADC Signal |
+|---|---|
+| `clk` | `CLK` |
+| `dig_in[0]` | `START` |
+| `dig_in[1]` | `RSTN` |
+
+### Digital Outputs
+
+| ADC Signal | Chipalooza Signal |
+|---|---|
+| `C0` | `dig_out[0]` |
+| `C1` | `dig_out[1]` |
+| `C2` | `dig_out[2]` |
+| `C3` | `dig_out[3]` |
+| `C4` | `dig_out[4]` |
+| `C5` | `dig_out[5]` |
+| `C6` | `dig_out[6]` |
+| `C7` | `dig_out[7]` |
+| `C8` | `dig_out[8]` |
+| `C9` | `dig_out[9]` |
+| `busy` | `dig_out[10]` |
+| `valid` | `dig_out[11]` |
+
+---
+
+# Layout
+
+The reusable top-level ADC GDS is located at:
+```text
+circuit_files/layout/top/sar_10_bit_top.gds
+```
+
+The pre-fill version is retained at:
+```text
+circuit_files/layout/top_prefill/sar_10_bit_top_prefill.gds
+```
+
+Individual block layouts are available under:
+```text
+circuit_files/layout/
+```
+
+---
+
+# SAR FSM
+
+The SAR controller RTL is located at:
+
+```text
+circuit_files/src/sar_fsm/sar_fsm.v
+```
+
+---
+
+# Verification
+
+Verification is performed at both block level and full-ADC level.
+
+---
+
+## Physical Verification Status
+
+| Check | Status |
+|---|---|
+| Main DRC | PASS |
+| Maximal-rule DRC | PASS |
+| Antenna checks | PASS |
+| DRC with official slot-wrapper geometry | PASS |
+| LVS | PASS |
+| Slot connectivity audit | PASS |
+
+Verification logs are available under:
+
+```text
+chipalooza/slot_16/verification/
+```
+
+The standalone slot-level density result is retained separately from the main DRC result.
+
+The Chipalooza harness performs additional fill as part of the full-chip integration flow. Sensitive CDAC and comparator regions are protected from inappropriate fill to avoid affecting analog performance.
+
+---
+
+# Target Performance
+
+| Parameter | Target |
+|---|---:|
+| Resolution | 10 bits |
+| Architecture | Fully differential SAR |
+| Sampling rate | 1 MS/s |
+| Analog supply | 3.3 V |
+| Digital supply | 1.2 V |
+| DNL | within ±1 LSB target |
+| INL | within ±1 LSB target |
+| Missing codes | None |
+| Input type | Differential |
+| Digital result | 10-bit parallel code |
+| Status outputs | `busy`, `valid` |
+
+These values are design targets unless explicitly identified as post-layout or measured results.
+
+Final silicon performance will be characterized after fabrication.
+
+---
+
+# Repository Structure
+
+```text
 .
-├── src/          # chip_top.sv / chip_core.sv — top-level pads + SAR ADC core
-├── librelane/     # LibreLane flow config (config.yaml, chip_top.sdc, pad placement)
-├── cocotb/        # cocotb testbench (chip_top_tb.py) + waveform output
-├── ip/            # hard IP (e.g. bondpad cells)
-├── docs/          # Block_Diagram.png, proposal, equipment/team docs
-└── Makefile
+├── AUTHORS.md
+│
+├── circuit_files/
+│   ├── layout/
+│   │   ├── cdac/
+│   │   ├── comparator/
+│   │   ├── dac_switch/
+│   │   ├── inverter/
+│   │   ├── Levelshifter_1.2-3.3/
+│   │   ├── Levelshifter_3.3-1.2/
+│   │   ├── tg/
+│   │   ├── top/
+│   │   └── top_prefill/
+│   │
+│   ├── src/
+│   │   └── sar_fsm/
+│   │
+│   ├── tb/
+│   │
+│   └── xschem/
+│       ├── *.sch
+│       ├── *.sym
+│       ├── spice/
+│       └── spice_pex/
+│
+├── chipalooza/
+│   └── slot_16/
+│       ├── layout/
+│       ├── netlist/
+│       └── verification/
+│
+├── final/
+│   └── gds/
+│       └── slot_16.gds
+│
+├── src/
+│   ├── chip_core.sv
+│   └── chip_top.sv
+│
+├── cocotb/
+│   └── chip_top_tb.py
+│
+├── docs/
+│   ├── Block_Diagram.png
+│   └── README.md
+│
+├── ip/
+│   └── bondpad_70x70/
+│
+├── librelane/
+│   ├── chip_top.sdc
+│   └── config.yaml
+│
+├── Makefile
+├── flake.nix
+├── flake.lock
+└── LICENSE
 ```
 
-## Building the Design
+---
 
-Built on the [IHP SG13CMOS5L LibreLane template](https://github.com/IHP-GmbH/ihp-sg13cmos5l-librelane-template).
 
-**Prerequisites**
-- Clone the PDK per the [ihp-sg13cmos5l](https://github.com/IHP-GmbH/ihp-sg13cmos5l) repo instructions and set `$PDK_ROOT` / `$PDK`
-- Install LibreLane via the Nix-based install guide: https://librelane.readthedocs.io/en/latest/installation/nix_installation/index.html
 
-**Implement**
-```
-nix-shell
-make librelane
+# Tools
+
+The project uses the following open-source tools:
+- Xschem
+- ngspice
+- KLayout
+- Magic
+- Yosys
+- OpenROAD
+- LibreLane
+- Icarus Verilog
+- cocotb
+
+---
+
+# Analog Simulation
+
+Transistor-level testbenches are located under:
+
+```text
+circuit_files/tb/
 ```
 
-**View the result**
-```
-make librelane-openroad   # OpenROAD GUI
-make librelane-klayout    # KLayout
+Available testbenches include:
+
+```text
+cdac_caps_10b_diff_tb.sch
+cdac_comp_msb_step_tb.sch
+cdac_comp_sar_fsm_tb.sch
+dac_sw_tb.sch
+inv_tb.sch
+LS_h2l_tb.sch
+LS_l2h_tb.sch
+sar_10_bit_tb.sch
+sar_10_bit_tb_1.sch
+strong_arm_comp_tb.sch
+tg_tb.sch
 ```
 
-**Freeze a run**
+Schematics and SPICE views are located under:
+```text
+circuit_files/xschem/
 ```
-make copy-final
-```
-Copies the latest successful run into `final/` — only works if that run completed without errors.
 
-**Simulate (cocotb + Icarus Verilog)**
+The directory also contains extracted/post-layout SPICE views under:
+
+```text
+circuit_files/xschem/spice_pex/
 ```
-make sim         # RTL simulation
-make sim-gl      # gate-level simulation (needs final/ populated first)
-make sim-view    # opens the .fst waveform, e.g. in GTKWave
-```
+
+---
+
+
+# Silicon Bring-Up Plan
+
+Initial silicon testing is planned in the following order:
+
+1. Verify continuity and supply connections.
+2. Apply the 1.2 V and 3.3 V rails.
+3. Hold the ADC in reset.
+4. Measure static current.
+5. Enable the project clock.
+6. Apply the required `VCM` and `VREF`.
+7. Apply a differential mid-scale input.
+8. Trigger a conversion.
+9. Check `busy`, `valid`, and `C[9:0]`.
+10. Test several DC input levels.
+11. Perform a complete DC transfer sweep.
+12. Measure DNL, INL, offset, and gain.
+13. Apply a sinusoidal differential input.
+14. Measure SNR, SNDR, SFDR, and ENOB.
+15. Repeat key measurements over voltage and temperature where practical.
+
+---
 
 ## License
 
-Apache-2.0 
+This project is licensed under the **Apache License 2.0**.
+
+See [LICENSE](LICENSE) for details.
