@@ -1,0 +1,39 @@
+* PEX produced on Fri Oct  2 01:38:24 AM CEST 2026 using /foss/tools/sak/sak-pex.sh with m=3 and s=1 (extresist threshold=10000 mOhm, minres=1000 mOhm, mindelay=1 ps)
+* NGSPICE file created from dac_sw_2to1_tg_pex.ext - technology: ihp-sg13cmos5l
+
+.subckt dac_sw_2to1_tg_pex vss vref out sel vcm vdd
+X0 out sel vref vss.t1 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X1 out a_n1665_1872# vref vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X2 vcm a_n1665_1872# out vss.t0 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X3 out a_n1665_1872# vref vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X4 a_n1665_1872# sel vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X5 vcm sel out vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X6 vcm sel out vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X7 a_n1665_1872# sel vss.t3 vss.t2 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X8 vdd sel a_n1665_1872# vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+R0 vss.t0 vss.t2 58.6212
+R1 vss.t2 vss.t1 58.6212
+R2 vss.t3 vss.n0 23.0901
+R3 vss vss.t3 19.4844
+R4 vss.n0 vss.t1 8.5005
+R5 vss.n0 vss.t0 8.5005
+C0 vdd vref 0.43762f
+C1 vref sel 0.06201f
+C2 vdd vcm 0.61163f
+C3 sel vcm 1.22111f
+C4 vdd a_n1665_1872# 2.0675f
+C5 out vdd 1.90017f
+C6 sel a_n1665_1872# 1.7828f
+C7 out sel 0.44637f
+C8 out vref 2.55272f
+C9 vref a_n1665_1872# 0.55699f
+C10 out vcm 2.78088f
+C11 vcm a_n1665_1872# 0.11032f
+C12 vdd sel 1.64332f
+C13 out a_n1665_1872# 1.10973f
+C14 vcm vss 0.95658f
+C15 out vss 3.11146f
+C16 vref vss 2.73657f
+C17 vdd vss 0.11881f
+.ends
+
