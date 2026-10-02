@@ -1,0 +1,491 @@
+PATH=/home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/bin:$PATH make -C verilog/dv
+rm -f results.xml
+mkdir -p sim_build
+/home/arjun/eda/tools/iverilog-13/bin/iverilog -o sim_build/sim.vvp -s chipalooza_frame -g2012 -g2012 -gno-specify -I/home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/rtl -I/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l -f sim_build/cmds.f  /home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/dut.v
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:42: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:44: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:50: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:52: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:66: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:68: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:103: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:105: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:111: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:113: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:127: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:129: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:177: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:179: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:227: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:229: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:274: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:276: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:290: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:292: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:306: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:308: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:322: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:324: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:346: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:348: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:385: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:387: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:393: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:395: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:405: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:407: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:417: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:419: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:1786: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:1788: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:1830: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:1832: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:1881: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:1883: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:1901: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:1903: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2487: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2489: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2733: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2735: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2743: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2745: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2802: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2804: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2811: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2813: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2866: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2868: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2875: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2877: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2932: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2934: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2990: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:2992: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:3199: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:3201: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:3211: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:3213: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:3250: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:3252: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:3262: sorry: ifnone with an edge-sensitive path is not supported.
+/home/arjun/eda/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v:3264: sorry: ifnone with an edge-sensitive path is not supported.
+rm -f results.xml
+COCOTB_TEST_MODULES=test_analog,test_bias,test_clocking,test_no_clock,test_pattern,test_project_control,test_router,test_sequencer,test_spi,test_sram COCOTB_TESTCASE=  COCOTB_TOPLEVEL=chipalooza_frame TOPLEVEL_LANG=verilog       \
+	 /home/arjun/eda/tools/iverilog-13/bin/vvp -m /home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/lib/python3.12/site-packages/cocotb/libs/libcocotbvpi_icarus.so   sim_build/sim.vvp   
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:242  in gpi_load_users                  Loaded entry library: '/usr/lib/x86_64-linux-gnu/libpython3.12.so.1.0'
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:233  in gpi_load_users                  Running entry func 'initialize' from loaded library '/home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/lib/python3.12/site-packages/cocotb/simulator.cpython-312-x86_64-linux-gnu.so'
+     -.--ns INFO     pygpi                              ..ib/pygpi/embed.cpp:114  in initialize                      Using Python 3.12.12 interpreter at /home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/bin/python3
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: VPI support registered
+     0.00ns INFO     cocotb.initialize                  Seeding Python random module with 1790856281
+     0.00ns INFO     cocotb.initialize                  Initialized cocotb v2.1.0 from /home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb.initialize                  Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb.regression                  Running tests
+     0.00ns INFO     cocotb.regression                  running test_analog.test_power_gate_reaches_only_selected_slot (1/100)
+                                                            The 3.3 V and 1.2 V gates deliver the rail to one slot only.
+ 31701.00ns INFO     cocotb.regression                  test_analog.test_power_gate_reaches_only_selected_slot passed
+ 31701.00ns INFO     cocotb.regression                  running test_analog.test_power_gates_independent (2/100)
+                                                            The 3.3 V and 1.2 V gates are controlled separately.
+ 73302.00ns INFO     cocotb.regression                  test_analog.test_power_gates_independent passed
+ 73302.00ns INFO     cocotb.regression                  running test_analog.test_deselecting_removes_power (3/100)
+                                                            Selecting another slot disconnects the previous one.
+ 95103.00ns INFO     cocotb.regression                  test_analog.test_deselecting_removes_power passed
+ 95103.00ns INFO     cocotb.regression                  running test_analog.test_power_is_off_after_reset (4/100)
+                                                            No slot is powered out of reset.
+ 97204.00ns INFO     cocotb.regression                  test_analog.test_power_is_off_after_reset passed
+ 97204.00ns INFO     cocotb.regression                  running test_analog.test_bias_switches_route_to_selected_slot (5/100)
+                                                            The two current biases and the voltage bias reach one slot only.
+114005.00ns INFO     cocotb.regression                  test_analog.test_bias_switches_route_to_selected_slot passed
+114005.00ns INFO     cocotb.regression                  running test_analog.test_bias_switches_independent (6/100)
+                                                            ibias0, ibias1 and vbias are separately controlled.
+150806.01ns INFO     cocotb.regression                  test_analog.test_bias_switches_independent passed
+150806.01ns INFO     cocotb.regression                  running test_analog.test_vbias_follows_voltgen (7/100)
+                                                            The voltage bias delivered to a slot is the voltgen output.
+237007.01ns INFO     cocotb.regression                  test_analog.test_vbias_follows_voltgen passed
+237007.01ns INFO     cocotb.regression                  running test_analog.test_voltgen_disabled_is_zero_not_floating (8/100)
+                                                            A disabled voltgen outputs 0 V, which is different from NaN.
+283208.01ns INFO     cocotb.regression                  test_analog.test_voltgen_disabled_is_zero_not_floating passed
+283208.01ns INFO     cocotb.regression                  running test_analog.test_analog_bus_enables_are_one_hot (9/100)
+                                                            Only the selected slot's four bus switches are enabled.
+314909.01ns INFO     cocotb.regression                  test_analog.test_analog_bus_enables_are_one_hot passed
+314909.01ns INFO     cocotb.regression                  running test_analog.test_analog_bus_lines_independent (10/100)
+                                                            analog_bus_ena selects the four lines individually, not as a block.
+376310.01ns INFO     cocotb.regression                  test_analog.test_analog_bus_lines_independent passed
+376310.01ns INFO     cocotb.regression                  running test_analog.test_analog_bus_is_not_connected_to_any_slot_after_reset (11/100)
+                                                            Out of reset no slot touches the four shared analog pins.
+378411.01ns INFO     cocotb.regression                  test_analog.test_analog_bus_is_not_connected_to_any_slot_after_reset passed
+378411.01ns INFO     cocotb.regression                  running test_analog.test_project_zero_asserted_only_for_slot_zero (12/100)
+                                                            project_zero follows proj_sel == 0, which is also the reset state.
+400412.01ns INFO     cocotb.regression                  test_analog.test_project_zero_asserted_only_for_slot_zero passed
+400412.01ns INFO     cocotb.regression                  running test_analog.test_diagnostic_switches_drive_the_shared_pins (13/100)
+                                                            Selecting project 0 puts the internal biases on the shared pins.
+441913.01ns INFO     cocotb.regression                  test_analog.test_diagnostic_switches_drive_the_shared_pins passed
+441913.01ns INFO     cocotb.regression                  running test_analog.test_bandgap_off_is_zero_and_on_is_plausible (14/100)
+                                                            The bandgap is 0 V disabled and in a believable band enabled.
+473514.01ns INFO     cocotb.regression                  test_analog.test_bandgap_off_is_zero_and_on_is_plausible passed
+473514.01ns INFO     cocotb.regression                  running test_analog.test_bandgap_trim_is_monotonic_and_saturates (15/100)
+                                                            Raising the trim code never lowers the output, and it stops at 16.
+595115.01ns INFO     cocotb.regression                  test_analog.test_bandgap_trim_is_monotonic_and_saturates passed
+595115.01ns INFO     cocotb.regression                  running test_analog.test_pads_are_disconnected_by_default (16/100)
+                                                            With nothing driving a pad, the pad reads as disconnected.
+602116.02ns INFO     cocotb.regression                  test_analog.test_pads_are_disconnected_by_default passed
+602116.02ns INFO     cocotb.regression                  running test_analog.test_pad_voltage_reaches_only_the_selected_slot (17/100)
+                                                            A voltage on a shared pad arrives at one project, on one line.
+614017.02ns INFO     cocotb.regression                  test_analog.test_pad_voltage_reaches_only_the_selected_slot passed
+614017.02ns INFO     cocotb.regression                  running test_analog.test_pad_is_gated_by_its_own_bus_enable (18/100)
+                                                            Each bus line can be opened and closed independently of the pad.
+635818.02ns INFO     cocotb.regression                  test_analog.test_pad_is_gated_by_its_own_bus_enable passed
+635818.02ns INFO     cocotb.regression                  running test_analog.test_diagnostic_drive_takes_precedence_over_the_pad (19/100)
+                                                            When the chip drives a pad, the chip wins.
+672419.02ns INFO     cocotb.regression                  test_analog.test_diagnostic_drive_takes_precedence_over_the_pad passed
+672419.02ns INFO     cocotb.regression                  running test_analog.test_bandgap_matches_the_characterised_curve (20/100)
+                                                            Every trim code produces its simulated voltage.
+779020.02ns INFO     cocotb.regression                  test_analog.test_bandgap_matches_the_characterised_curve passed
+779020.02ns INFO     cocotb.regression                  running test_analog.test_bandgap_nominal_is_half_trim (21/100)
+                                                            The nominal setting is the middle of the code range.
+805621.02ns INFO     cocotb.chipalooza_frame            bandgap trim headroom from nominal 1.231 V: -47 mV / +64 mV
+805621.02ns INFO     cocotb.regression                  test_analog.test_bandgap_nominal_is_half_trim passed
+805621.02ns INFO     cocotb.regression                  running test_bias.test_bias_defaults_produce_the_documented_currents (22/100)
+                                                            The five internal biases come out at their nominal values.
+827322.02ns INFO     cocotb.regression                  test_bias.test_bias_defaults_produce_the_documented_currents passed
+827322.02ns INFO     cocotb.regression                  running test_bias.test_bias_range_checks_pass_with_the_documented_settings (23/100)
+                                                            The bandgap and voltgen both accept the biases they are given.
+858823.02ns INFO     cocotb.regression                  test_bias.test_bias_range_checks_pass_with_the_documented_settings passed
+858823.02ns INFO     cocotb.regression                  running test_bias.test_bias_range_check_rejects_a_wrong_setting (24/100)
+                                                            The range check is not vacuous:  a mis-set trim must fail it.
+895424.02ns INFO     cocotb.regression                  test_bias.test_bias_range_check_rejects_a_wrong_setting passed
+895424.02ns INFO     cocotb.regression                  running test_bias.test_biasgen_disabled_zeroes_every_bias (25/100)
+                                                            A disabled biasgen sources and sinks nothing.
+922125.02ns INFO     cocotb.regression                  test_bias.test_biasgen_disabled_zeroes_every_bias passed
+922125.02ns INFO     cocotb.regression                  running test_bias.test_idac_outputs_scale_with_the_unit_current (26/100)
+                                                            idac1 and idac2 are integer counts of the 250 nA unit.
+993226.03ns INFO     cocotb.regression                  test_bias.test_idac_outputs_scale_with_the_unit_current passed
+993226.03ns INFO     cocotb.regression                  running test_bias.test_idac_current_reaches_a_project_unclamped (27/100)
+                                                            The current a project receives is the current the iDAC sourced.
+1039427.03ns INFO     cocotb.regression                  test_bias.test_idac_current_reaches_a_project_unclamped passed
+1039427.03ns INFO     cocotb.regression                  running test_bias.test_bias_polarity_is_preserved_through_the_switches (28/100)
+                                                            Sinks stay negative and sources stay positive at the project.
+1080728.03ns INFO     cocotb.regression                  test_bias.test_bias_polarity_is_preserved_through_the_switches passed
+1080728.03ns INFO     cocotb.regression                  running test_bias.test_bias_registers_read_back (29/100)
+                                                            The documented register values survive a write/read round trip.
+1121929.03ns INFO     cocotb.regression                  test_bias.test_bias_registers_read_back passed
+1121929.03ns INFO     cocotb.regression                  running test_clocking.test_sram_clock_sources_are_exclusive (30/100)
+                                                            seq_ena must be low whenever the SPI can reach the SRAM.
+1130650.03ns INFO     cocotb.regression                  test_clocking.test_sram_clock_sources_are_exclusive passed
+1130650.03ns INFO     cocotb.regression                  running test_clocking.test_sram_clock_follows_selected_source (31/100)
+                                                            sram_clk tracks SCK when stopped and clk when running.
+1134486.03ns INFO     cocotb.regression                  test_clocking.test_sram_clock_follows_selected_source passed
+1134486.03ns INFO     cocotb.regression                  running test_clocking.test_seq_strobe_is_not_a_clock (32/100)
+                                                            seq_ena must latch on SCK, not on a rising edge of seq_strobe.
+1143207.03ns INFO     cocotb.regression                  test_clocking.test_seq_strobe_is_not_a_clock passed
+1143207.03ns INFO     cocotb.regression                  running test_clocking.test_loop_mode_tracks_command (33/100)
+                                                            Looping and single-shot select different loop_mode values.
+1150398.03ns INFO     cocotb.regression                  test_clocking.test_loop_mode_tracks_command passed
+1150398.03ns INFO     cocotb.regression                  running test_clocking.test_digital_reset_clears_sequencer (34/100)
+                                                            The 0x04 command clears seq_ena and loop_mode asynchronously.
+1155929.03ns INFO     cocotb.regression                  test_clocking.test_digital_reset_clears_sequencer passed
+1155929.03ns INFO     cocotb.regression                  running test_no_clock.test_spi_and_register_file_without_a_clock (35/100)
+                                                            The SPI and the register file work with no chip clock.
+1211830.03ns INFO     cocotb.regression                  test_no_clock.test_spi_and_register_file_without_a_clock passed
+1211830.03ns INFO     cocotb.regression                  running test_no_clock.test_sram_access_without_a_clock (36/100)
+                                                            The SRAM can be written and read over SPI with no chip clock.
+1238031.03ns INFO     cocotb.regression                  test_no_clock.test_sram_access_without_a_clock passed
+1238031.03ns INFO     cocotb.regression                  running test_no_clock.test_input_bus_constants_without_a_clock (37/100)
+                                                            Project input bits can be set to constants with no chip clock.
+1365432.04ns INFO     cocotb.regression                  test_no_clock.test_input_bus_constants_without_a_clock passed
+1365432.04ns INFO     cocotb.regression                  running test_no_clock.test_input_bus_from_pads_without_a_clock (38/100)
+                                                            Project input bits can be driven from the pads with no chip clock.
+1410333.04ns INFO     cocotb.regression                  test_no_clock.test_input_bus_from_pads_without_a_clock passed
+1410333.04ns INFO     cocotb.regression                  running test_no_clock.test_output_routing_without_a_clock (39/100)
+                                                            Project outputs still reach the pads, in the right direction.
+1457534.04ns INFO     cocotb.regression                  test_no_clock.test_output_routing_without_a_clock passed
+1457534.04ns INFO     cocotb.regression                  running test_no_clock.test_project_selection_and_enables_without_a_clock (40/100)
+                                                            Selecting a project and switching its supplies needs no clock.
+1474335.04ns INFO     cocotb.regression                  test_no_clock.test_project_selection_and_enables_without_a_clock passed
+1474335.04ns INFO     cocotb.regression                  running test_no_clock.test_analog_biases_settle_without_a_clock (41/100)
+                                                            The bandgap, biasgen and voltgen produce their values with no clock.
+1500936.04ns INFO     cocotb.regression                  test_no_clock.test_analog_biases_settle_without_a_clock passed
+1500936.04ns INFO     cocotb.regression                  running test_no_clock.test_sequencer_and_pattern_generator_are_frozen (42/100)
+                                                            The other half of the claim:  without a clock they cannot run.
+1563637.04ns INFO     cocotb.regression                  test_no_clock.test_sequencer_and_pattern_generator_are_frozen passed
+1563637.04ns INFO     cocotb.regression                  running test_no_clock.test_constants_still_work_while_the_sequencer_is_started (43/100)
+                                                            The documented sentence, end to end, in one test.
+1651038.04ns INFO     cocotb.regression                  test_no_clock.test_constants_still_work_while_the_sequencer_is_started passed
+1651038.04ns INFO     cocotb.regression                  running test_pattern.test_reset_defaults (44/100)
+                                                            The pattern generator comes up in mode 00, divided by 8, at address 0.
+1717305.04ns INFO     cocotb.regression                  test_pattern.test_reset_defaults passed
+1717305.04ns INFO     cocotb.regression                  running test_pattern.test_mode_clock_walks_memory (45/100)
+                                                            Mode 00 steps the address every (prescaler + 1) clocks and wraps.
+1858493.54ns INFO     cocotb.regression                  test_pattern.test_mode_clock_walks_memory passed
+1858493.54ns INFO     cocotb.regression                  running test_pattern.test_mode_clock_data_lags_address_by_one (46/100)
+                                                            The byte presented is mem[addr - 1]:  a synchronous SRAM read.
+1913109.54ns INFO     cocotb.regression                  test_pattern.test_mode_clock_data_lags_address_by_one passed
+1913109.54ns INFO     cocotb.regression                  running test_pattern.test_mode_clock_loop_and_single_shot (47/100)
+                                                            Loop wraps to 0 and strobes;  single shot halts at pat_stop.
+2010640.55ns INFO     cocotb.regression                  test_pattern.test_mode_clock_loop_and_single_shot passed
+2010640.55ns INFO     cocotb.regression                  running test_pattern.test_mode_strobe_steps_on_the_sequencer (48/100)
+                                                            Mode 10 advances the address once per sequencer strobe.
+2065946.55ns INFO     cocotb.regression                  test_pattern.test_mode_strobe_steps_on_the_sequencer passed
+2065946.55ns INFO     cocotb.regression                  running test_pattern.test_mode_timed_latches_the_timer_byte (49/100)
+                                                            Mode 01 must load the timer from the ODD address, not the data byte.
+2131742.55ns INFO     cocotb.regression                  test_pattern.test_mode_timed_latches_the_timer_byte passed
+2131742.55ns INFO     cocotb.regression                  running test_pattern.test_mode_timed_holds_each_pattern_for_its_interval (50/100)
+                                                            Mode 01 holds each data byte for its own timer value.
+2187881.05ns INFO     cocotb.regression                  test_pattern.test_mode_timed_holds_each_pattern_for_its_interval passed
+2187881.05ns INFO     cocotb.regression                  running test_pattern.test_mode_timed_timer_zero (51/100)
+                                                            Document what a timer byte of zero does.
+2243119.55ns INFO     cocotb.regression                  test_pattern.test_mode_timed_timer_zero passed
+2243119.55ns INFO     cocotb.regression                  running test_pattern.test_undefined_mode_is_inert (52/100)
+                                                            sram_mode 11 is undefined:  assert only that it does not wedge.
+2340568.05ns INFO     cocotb.regression                  test_pattern.test_undefined_mode_is_inert passed
+2340568.05ns INFO     cocotb.regression                  running test_project_control.test_select_is_one_hot (53/100)
+                                                            proj_sel enables exactly one slot, for every one of the 18.
+2520769.05ns INFO     cocotb.regression                  test_project_control.test_select_is_one_hot passed
+2520769.05ns INFO     cocotb.regression                  running test_project_control.test_slot_zero_selects_nothing (54/100)
+                                                            proj_sel = 0 is the diagnostic address and matches no slot.
+2532670.05ns INFO     cocotb.regression                  test_project_control.test_slot_zero_selects_nothing passed
+2532670.05ns INFO     cocotb.regression                  running test_project_control.test_addresses_above_18_select_nothing (55/100)
+                                                            proj_sel is five bits;  19..31 are unassigned and must match no slot.
+2564371.05ns INFO     cocotb.regression                  test_project_control.test_addresses_above_18_select_nothing passed
+2564371.05ns INFO     cocotb.regression                  running test_project_control.test_unselected_slots_see_no_enables (56/100)
+                                                            Every project-facing enable is deasserted on unselected slots.
+2576272.06ns INFO     cocotb.regression                  test_project_control.test_unselected_slots_see_no_enables passed
+2576272.06ns INFO     cocotb.regression                  running test_project_control.test_dig_in_latch_is_transparent_then_holds (57/100)
+                                                            dig_ena opens the input latch;  releasing it freezes the value.
+2686673.06ns INFO     cocotb.regression                  test_project_control.test_dig_in_latch_is_transparent_then_holds passed
+2686673.06ns INFO     cocotb.regression                  running test_project_control.test_dig_in_latch_clears_when_deselected (58/100)
+                                                            Deselecting a slot resets its input latch to zero.
+2750174.06ns INFO     cocotb.regression                  test_project_control.test_dig_in_latch_clears_when_deselected passed
+2750174.06ns INFO     cocotb.regression                  running test_project_control.test_only_the_selected_slot_sees_the_bus (59/100)
+                                                            The shared bus reaches one project and seventeen zeros.
+2808675.06ns INFO     cocotb.regression                  test_project_control.test_only_the_selected_slot_sees_the_bus passed
+2808675.06ns INFO     cocotb.regression                  running test_project_control.test_proj_clk_runs_only_on_the_selected_slot (60/100)
+                                                            The clock gate passes clk to one slot and holds the rest low.
+2820651.06ns INFO     cocotb.regression                  test_project_control.test_proj_clk_runs_only_on_the_selected_slot passed
+2820651.06ns INFO     cocotb.regression                  running test_project_control.test_proj_clk_has_no_glitch_when_selection_changes (61/100)
+                                                            Changing the selected project with clk stopped HIGH emits no edge.
+2832682.06ns INFO     cocotb.regression                  test_project_control.test_proj_clk_has_no_glitch_when_selection_changes passed
+2832682.06ns INFO     cocotb.regression                  running test_project_control.test_proj_clk_stops_cleanly_on_deselect (62/100)
+                                                            Deselecting with clk parked high does not leave the clock stuck high.
+2849443.06ns INFO     cocotb.regression                  test_project_control.test_proj_clk_stops_cleanly_on_deselect passed
+2849443.06ns INFO     cocotb.regression                  running test_project_control.test_proj_reset_is_synchronised_and_per_slot (63/100)
+                                                            The 0x04 command reaches the selected project as a synchronous reset.
+2863164.06ns INFO     cocotb.regression                  test_project_control.test_proj_reset_is_synchronised_and_per_slot passed
+2863164.06ns INFO     cocotb.regression                  running test_project_control.test_dig_out_daisy_chain_is_continuous (64/100)
+                                                            The two output chains relay their zero seed through all 18 slots.
+2875065.06ns INFO     cocotb.regression                  test_project_control.test_dig_out_daisy_chain_is_continuous passed
+2875065.06ns INFO     cocotb.regression                  running test_router.test_every_project_input_can_reach_every_pad (65/100)
+                                                            Each of the 24 project input bits can be sourced from any of the 12 pads.
+3379866.06ns INFO     cocotb.regression                  test_router.test_every_project_input_can_reach_every_pad passed
+3379866.06ns INFO     cocotb.regression                  running test_router.test_input_routing_is_per_bit (66/100)
+                                                            The 24 input bits are routed individually, not as a block.
+3424767.06ns INFO     cocotb.regression                  test_router.test_input_routing_is_per_bit passed
+3424767.06ns INFO     cocotb.regression                  running test_router.test_input_constant_codes (67/100)
+                                                            Codes 0xD and 0xE tie a project input low and high.
+3468668.07ns INFO     cocotb.regression                  test_router.test_input_constant_codes passed
+3468668.07ns INFO     cocotb.regression                  running test_router.test_input_special_code_splits_sequencer_and_sram (68/100)
+                                                            Code 0xF means seq_out on bits 0..15 and sram_out on bits 16..23.
+3512569.07ns INFO     cocotb.regression                  test_router.test_input_special_code_splits_sequencer_and_sram passed
+3512569.07ns INFO     cocotb.regression                  running test_router.test_every_project_output_can_reach_every_pad (69/100)
+                                                            Each of the 12 project outputs can be sent to any of the 12 pads.
+6769070.07ns INFO     cocotb.regression                  test_router.test_every_project_output_can_reach_every_pad passed
+6769070.07ns INFO     cocotb.regression                  running test_router.test_output_value_follows_the_routed_project_bit (70/100)
+                                                            Under the identity route a walking one on the outputs walks the pads.
+6794871.07ns INFO     cocotb.regression                  test_router.test_output_value_follows_the_routed_project_bit passed
+6794871.07ns INFO     cocotb.regression                  running test_router.test_unrouted_pads_stay_inputs (71/100)
+                                                            A pad that no project output names is left as an input.
+6861272.07ns INFO     cocotb.regression                  test_router.test_unrouted_pads_stay_inputs passed
+6861272.07ns INFO     cocotb.regression                  running test_router.test_lowest_numbered_output_wins_a_contested_pad (72/100)
+                                                            When several project outputs name one pad, the lowest wins.
+6886073.07ns INFO     cocotb.regression                  test_router.test_lowest_numbered_output_wins_a_contested_pad passed
+6886073.07ns INFO     cocotb.regression                  running test_router.test_an_output_reaches_exactly_the_one_pad_it_names (73/100)
+                                                            A nibble names a single destination, so an output drives one pad.
+6910774.07ns INFO     cocotb.regression                  test_router.test_an_output_reaches_exactly_the_one_pad_it_names passed
+6910774.07ns INFO     cocotb.regression                  running test_router.test_reset_routing_defaults (74/100)
+                                                            Out of reset both tables are zero, with the effect that implies.
+6922875.07ns INFO     cocotb.regression                  test_router.test_reset_routing_defaults passed
+6922875.07ns INFO     cocotb.regression                  running test_router.test_sram_monitor_overrides_routing (75/100)
+                                                            The SRAM monitor seizes a pad from the project that named it.
+6952376.07ns INFO     cocotb.regression                  test_router.test_sram_monitor_overrides_routing passed
+6952376.07ns INFO     cocotb.regression                  running test_router.test_sequencer_monitor_takes_all_twelve_pads (76/100)
+                                                            seq_monitor overrides everything and makes all 12 pads outputs.
+6986877.08ns INFO     cocotb.regression                  test_router.test_sequencer_monitor_takes_all_twelve_pads passed
+6986877.08ns INFO     cocotb.regression                  running test_sequencer.test_reset_defaults (77/100)
+                                                            The sequencer comes up stopped, in constant-zero mode, divided by 8.
+7008478.08ns INFO     cocotb.regression                  test_sequencer.test_reset_defaults passed
+7008478.08ns INFO     cocotb.regression                  running test_sequencer.test_constant_modes (78/100)
+                                                            Mode 101 holds all zeros and mode 110 holds all ones.
+7076476.58ns INFO     cocotb.regression                  test_sequencer.test_constant_modes passed
+7076476.58ns INFO     cocotb.regression                  running test_sequencer.test_binary_up_count (79/100)
+                                                            Mode 000 counts up from seq_start and wraps at seq_stop.
+7111562.58ns INFO     cocotb.regression                  test_sequencer.test_binary_up_count passed
+7111562.58ns INFO     cocotb.regression                  running test_sequencer.test_binary_down_count (80/100)
+                                                            Mode 001 counts down from seq_start and wraps at seq_stop.
+7146648.58ns INFO     cocotb.regression                  test_sequencer.test_binary_down_count passed
+7146648.58ns INFO     cocotb.regression                  running test_sequencer.test_gray_up_count (81/100)
+                                                            Mode 010 steps next = gray(cur + 1), stopping on a Gray comparison.
+7181757.08ns INFO     cocotb.regression                  test_sequencer.test_gray_up_count passed
+7181757.08ns INFO     cocotb.regression                  running test_sequencer.test_gray_down_count (82/100)
+                                                            Mode 011 steps next = gray(cur - 1), stopping on a Gray comparison.
+7216843.08ns INFO     cocotb.regression                  test_sequencer.test_gray_down_count passed
+7216843.08ns INFO     cocotb.regression                  running test_sequencer.test_lfsr_mode_is_pseudorandom_and_never_locks_up (83/100)
+                                                            Mode 100 produces a changing sequence that never reaches all zeros.
+7252649.08ns INFO     cocotb.regression                  test_sequencer.test_lfsr_mode_is_pseudorandom_and_never_locks_up passed
+7252649.08ns INFO     cocotb.regression                  running test_sequencer.test_single_shot_stops_and_loop_wraps (84/100)
+                                                            Single shot halts at seq_stop;  loop mode returns to seq_start.
+7321015.08ns INFO     cocotb.regression                  test_sequencer.test_single_shot_stops_and_loop_wraps passed
+7321015.08ns INFO     cocotb.regression                  running test_sequencer.test_strobe_pulses_at_the_wrap (85/100)
+                                                            seq_trig goes high on the cycle the sequencer wraps or ends.
+7356191.08ns INFO     cocotb.regression                  test_sequencer.test_strobe_pulses_at_the_wrap passed
+7356191.08ns INFO     cocotb.regression                  running test_sequencer.test_prescaler_divides_the_clock (86/100)
+                                                            The sequencer advances once every (prescaler + 1) clocks.
+7459097.08ns INFO     cocotb.regression                  test_sequencer.test_prescaler_divides_the_clock passed
+7459097.08ns INFO     cocotb.regression                  running test_sequencer.test_stop_and_digital_reset_clear_the_output (87/100)
+                                                            CMD_SEQ_STOP and CMD_DIG_RESET both return seq_out to zero.
+7499380.59ns INFO     cocotb.regression                  test_sequencer.test_stop_and_digital_reset_clear_the_output passed
+7499380.59ns INFO     cocotb.regression                  running test_sequencer.test_undefined_mode_does_not_hang_or_strobe (88/100)
+                                                            Mode 111 is undefined:  assert only that it is inert.
+7567371.59ns INFO     cocotb.regression                  test_sequencer.test_undefined_mode_does_not_hang_or_strobe passed
+7567371.59ns INFO     cocotb.regression                  running test_spi.test_identity_registers (89/100)
+                                                            The fixed ID registers read back their hard-coded values.
+7588972.59ns INFO     cocotb.regression                  test_spi.test_identity_registers passed
+7588972.59ns INFO     cocotb.regression                  running test_spi.test_mask_rev_passthrough (90/100)
+                                                            mask_rev_in is metal-programmed and must read back byte for byte.
+7600773.59ns INFO     cocotb.regression                  test_spi.test_mask_rev_passthrough passed
+7600773.59ns INFO     cocotb.regression                  running test_spi.test_register_write_readback (91/100)
+                                                            Writable registers hold what is written to them.
+7681174.59ns INFO     cocotb.regression                  test_spi.test_register_write_readback passed
+7681174.59ns INFO     cocotb.regression                  running test_spi.test_address_autoincrement (92/100)
+                                                            A write stream walks consecutive addresses, and so does a read.
+7702575.59ns INFO     cocotb.regression                  test_spi.test_address_autoincrement passed
+7702575.59ns INFO     cocotb.regression                  running test_spi.test_csb_resets_spi (93/100)
+                                                            Raising CSB mid-transaction resets the state machine.
+7722576.59ns INFO     cocotb.regression                  test_spi.test_csb_resets_spi passed
+7722576.59ns INFO     cocotb.regression                  running test_spi.test_nop_command (94/100)
+                                                            A no-op command leaves the register file alone.
+7739277.59ns INFO     cocotb.regression                  test_spi.test_nop_command passed
+7739277.59ns INFO     cocotb.regression                  running test_sram.test_sram_write_read (95/100)
+                                                            Bytes written to the SRAM read back unchanged.
+7762278.59ns INFO     cocotb.regression                  test_sram.test_sram_write_read passed
+7762278.59ns INFO     cocotb.regression                  running test_sram.test_sram_autoincrement_across_256 (96/100)
+                                                            Auto-increment must carry out of the low address byte.
+7798079.59ns INFO     cocotb.regression                  test_sram.test_sram_autoincrement_across_256 passed
+7798079.59ns INFO     cocotb.regression                  running test_sram.test_sram_high_addresses_are_distinct (97/100)
+                                                            0x100 must be a different location from 0x00.
+7833980.60ns INFO     cocotb.regression                  test_sram.test_sram_high_addresses_are_distinct passed
+7833980.60ns INFO     cocotb.regression                  running test_sram.test_sram_walking_ones (98/100)
+                                                            A walking-ones pattern, as the pattern generator would hold.
+7903581.60ns INFO     cocotb.regression                  test_sram.test_sram_walking_ones passed
+7903581.60ns INFO     cocotb.regression                  running test_sram.test_sram_read_does_not_disturb (99/100)
+                                                            Reading a location leaves it and its neighbours intact.
+7949182.60ns INFO     cocotb.regression                  test_sram.test_sram_read_does_not_disturb passed
+7949182.60ns INFO     cocotb.regression                  running test_sram.test_register_access_after_sram_access (100/100)
+                                                            The SPI returns to the register map after an SRAM stream.
+7970683.60ns INFO     cocotb.regression                  test_sram.test_register_access_after_sram_access passed
+7970683.60ns INFO     cocotb.regression                  *********************************************************************************************************************************
+                                                        ** TEST                                                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************************
+                                                        ** test_analog.test_power_gate_reaches_only_selected_slot                    PASS       31701.00           0.01    4170773.73  **
+                                                        ** test_analog.test_power_gates_independent                                  PASS       41601.00           0.01    6155342.63  **
+                                                        ** test_analog.test_deselecting_removes_power                                PASS       21801.00           0.00    6187247.22  **
+                                                        ** test_analog.test_power_is_off_after_reset                                 PASS        2101.00           0.00   13246653.43  **
+                                                        ** test_analog.test_bias_switches_route_to_selected_slot                     PASS       16801.00           0.00    5583393.18  **
+                                                        ** test_analog.test_bias_switches_independent                                PASS       36801.00           0.01    6024532.46  **
+                                                        ** test_analog.test_vbias_follows_voltgen                                    PASS       86201.00           0.01    6128326.25  **
+                                                        ** test_analog.test_voltgen_disabled_is_zero_not_floating                    PASS       46201.00           0.01    5935633.52  **
+                                                        ** test_analog.test_analog_bus_enables_are_one_hot                           PASS       31701.00           0.01    5694643.77  **
+                                                        ** test_analog.test_analog_bus_lines_independent                             PASS       61401.00           0.01    5845880.90  **
+                                                        ** test_analog.test_analog_bus_is_not_connected_to_any_slot_after_reset      PASS        2101.00           0.00    4336295.22  **
+                                                        ** test_analog.test_project_zero_asserted_only_for_slot_zero                 PASS       22001.00           0.00    6105537.71  **
+                                                        ** test_analog.test_diagnostic_switches_drive_the_shared_pins                PASS       41501.00           0.01    5960030.02  **
+                                                        ** test_analog.test_bandgap_off_is_zero_and_on_is_plausible                  PASS       31601.00           0.01    6124538.26  **
+                                                        ** test_analog.test_bandgap_trim_is_monotonic_and_saturates                  PASS      121601.00           0.02    6060857.67  **
+                                                        ** test_analog.test_pads_are_disconnected_by_default                         PASS        7001.00           0.00    6667129.20  **
+                                                        ** test_analog.test_pad_voltage_reaches_only_the_selected_slot               PASS       11901.00           0.00    6082148.43  **
+                                                        ** test_analog.test_pad_is_gated_by_its_own_bus_enable                       PASS       21801.00           0.00    6121345.24  **
+                                                        ** test_analog.test_diagnostic_drive_takes_precedence_over_the_pad           PASS       36601.00           0.01    6244332.56  **
+                                                        ** test_analog.test_bandgap_matches_the_characterised_curve                  PASS      106601.00           0.02    6211213.76  **
+                                                        ** test_analog.test_bandgap_nominal_is_half_trim                             PASS       26601.00           0.00    6182440.18  **
+                                                        ** test_bias.test_bias_defaults_produce_the_documented_currents              PASS       21701.00           0.00    5995690.63  **
+                                                        ** test_bias.test_bias_range_checks_pass_with_the_documented_settings        PASS       31501.00           0.01    6274612.38  **
+                                                        ** test_bias.test_bias_range_check_rejects_a_wrong_setting                   PASS       36601.00           0.01    6188904.22  **
+                                                        ** test_bias.test_biasgen_disabled_zeroes_every_bias                         PASS       26701.00           0.00    6229323.89  **
+                                                        ** test_bias.test_idac_outputs_scale_with_the_unit_current                   PASS       71101.00           0.01    6141627.46  **
+                                                        ** test_bias.test_idac_current_reaches_a_project_unclamped                   PASS       46201.00           0.01    6189585.84  **
+                                                        ** test_bias.test_bias_polarity_is_preserved_through_the_switches            PASS       41301.00           0.01    5972178.44  **
+                                                        ** test_bias.test_bias_registers_read_back                                   PASS       41201.00           0.01    6121627.22  **
+                                                        ** test_clocking.test_sram_clock_sources_are_exclusive                       PASS        8721.00           0.00    4263659.88  **
+                                                        ** test_clocking.test_sram_clock_follows_selected_source                     PASS        3836.00           0.00    4935577.16  **
+                                                        ** test_clocking.test_seq_strobe_is_not_a_clock                              PASS        8721.00           0.00    5308241.22  **
+                                                        ** test_clocking.test_loop_mode_tracks_command                               PASS        7191.00           0.00    5205826.16  **
+                                                        ** test_clocking.test_digital_reset_clears_sequencer                         PASS        5531.00           0.00    6549793.06  **
+                                                        ** test_no_clock.test_spi_and_register_file_without_a_clock                  PASS       55901.00           0.01    6353526.46  **
+                                                        ** test_no_clock.test_sram_access_without_a_clock                            PASS       26201.00           0.00    6651465.39  **
+                                                        ** test_no_clock.test_input_bus_constants_without_a_clock                    PASS      127401.00           0.02    5893283.88  **
+                                                        ** test_no_clock.test_input_bus_from_pads_without_a_clock                    PASS       44901.00           0.01    5986908.49  **
+                                                        ** test_no_clock.test_output_routing_without_a_clock                         PASS       47201.00           0.01    6042356.65  **
+                                                        ** test_no_clock.test_project_selection_and_enables_without_a_clock          PASS       16801.00           0.00    5417767.23  **
+                                                        ** test_no_clock.test_analog_biases_settle_without_a_clock                   PASS       26601.00           0.00    6103322.16  **
+                                                        ** test_no_clock.test_sequencer_and_pattern_generator_are_frozen             PASS       62701.00           0.01    7137625.58  **
+                                                        ** test_no_clock.test_constants_still_work_while_the_sequencer_is_started    PASS       87401.00           0.01    5873119.66  **
+                                                        ** test_pattern.test_reset_defaults                                          PASS       66267.00           0.01    6001406.77  **
+                                                        ** test_pattern.test_mode_clock_walks_memory                                 PASS      141188.50           0.03    5001133.13  **
+                                                        ** test_pattern.test_mode_clock_data_lags_address_by_one                     PASS       54616.00           0.01    5386990.67  **
+                                                        ** test_pattern.test_mode_clock_loop_and_single_shot                         PASS       97531.00           0.02    5395635.50  **
+                                                        ** test_pattern.test_mode_strobe_steps_on_the_sequencer                      PASS       55306.00           0.01    4537385.39  **
+                                                        ** test_pattern.test_mode_timed_latches_the_timer_byte                       PASS       65796.00           0.01    5776913.48  **
+                                                        ** test_pattern.test_mode_timed_holds_each_pattern_for_its_interval          PASS       56138.50           0.02    3699948.93  **
+                                                        ** test_pattern.test_mode_timed_timer_zero                                   PASS       55238.50           0.01    4624578.51  **
+                                                        ** test_pattern.test_undefined_mode_is_inert                                 PASS       97448.50           0.02    5489171.25  **
+                                                        ** test_project_control.test_select_is_one_hot                               PASS      180201.00           0.03    5929800.37  **
+                                                        ** test_project_control.test_slot_zero_selects_nothing                       PASS       11901.00           0.00    6553241.53  **
+                                                        ** test_project_control.test_addresses_above_18_select_nothing               PASS       31701.00           0.01    6091190.92  **
+                                                        ** test_project_control.test_unselected_slots_see_no_enables                 PASS       11901.00           0.00    5933950.85  **
+                                                        ** test_project_control.test_dig_in_latch_is_transparent_then_holds          PASS      110401.00           0.02    5718089.44  **
+                                                        ** test_project_control.test_dig_in_latch_clears_when_deselected             PASS       63501.00           0.01    5705894.79  **
+                                                        ** test_project_control.test_only_the_selected_slot_sees_the_bus             PASS       58501.00           0.01    5784072.45  **
+                                                        ** test_project_control.test_proj_clk_runs_only_on_the_selected_slot         PASS       11976.00           0.00    3645945.21  **
+                                                        ** test_project_control.test_proj_clk_has_no_glitch_when_selection_changes   PASS       12031.00           0.00    6260390.71  **
+                                                        ** test_project_control.test_proj_clk_stops_cleanly_on_deselect              PASS       16761.00           0.00    6000335.15  **
+                                                        ** test_project_control.test_proj_reset_is_synchronised_and_per_slot         PASS       13721.00           0.04     311740.90  **
+                                                        ** test_project_control.test_dig_out_daisy_chain_is_continuous               PASS       11901.00           0.00    5418764.74  **
+                                                        ** test_router.test_every_project_input_can_reach_every_pad                  PASS      504801.00           0.09    5669945.29  **
+                                                        ** test_router.test_input_routing_is_per_bit                                 PASS       44901.00           0.01    5973511.72  **
+                                                        ** test_router.test_input_constant_codes                                     PASS       43901.00           0.01    5985261.16  **
+                                                        ** test_router.test_input_special_code_splits_sequencer_and_sram             PASS       43901.00           0.01    6265421.43  **
+                                                        ** test_router.test_every_project_output_can_reach_every_pad                 PASS     3256501.00           0.54    6052753.72  **
+                                                        ** test_router.test_output_value_follows_the_routed_project_bit              PASS       25801.00           0.00    6166233.28  **
+                                                        ** test_router.test_unrouted_pads_stay_inputs                                PASS       66401.00           0.01    6223089.54  **
+                                                        ** test_router.test_lowest_numbered_output_wins_a_contested_pad              PASS       24801.00           0.00    6098400.67  **
+                                                        ** test_router.test_an_output_reaches_exactly_the_one_pad_it_names           PASS       24701.00           0.00    6489284.34  **
+                                                        ** test_router.test_reset_routing_defaults                                   PASS       12101.00           0.00    6492861.97  **
+                                                        ** test_router.test_sram_monitor_overrides_routing                           PASS       29501.00           0.00    6151297.29  **
+                                                        ** test_router.test_sequencer_monitor_takes_all_twelve_pads                  PASS       34501.00           0.01    6406251.29  **
+                                                        ** test_sequencer.test_reset_defaults                                        PASS       21601.00           0.00    6524296.57  **
+                                                        ** test_sequencer.test_constant_modes                                        PASS       67998.50           0.01    5559054.21  **
+                                                        ** test_sequencer.test_binary_up_count                                       PASS       35086.00           0.01    5352133.96  **
+                                                        ** test_sequencer.test_binary_down_count                                     PASS       35086.00           0.01    5393690.64  **
+                                                        ** test_sequencer.test_gray_up_count                                         PASS       35108.50           0.01    5309437.22  **
+                                                        ** test_sequencer.test_gray_down_count                                       PASS       35086.00           0.01    5447440.52  **
+                                                        ** test_sequencer.test_lfsr_mode_is_pseudorandom_and_never_locks_up          PASS       35806.00           0.01    3974061.45  **
+                                                        ** test_sequencer.test_single_shot_stops_and_loop_wraps                      PASS       68366.00           0.01    4987438.38  **
+                                                        ** test_sequencer.test_strobe_pulses_at_the_wrap                             PASS       35176.00           0.01    5110330.60  **
+                                                        ** test_sequencer.test_prescaler_divides_the_clock                           PASS      102906.00           0.03    4073823.03  **
+                                                        ** test_sequencer.test_stop_and_digital_reset_clear_the_output               PASS       40283.50           0.01    5114728.51  **
+                                                        ** test_sequencer.test_undefined_mode_does_not_hang_or_strobe                PASS       67991.00           0.01    5517371.97  **
+                                                        ** test_spi.test_identity_registers                                          PASS       21601.00           0.00    6745287.04  **
+                                                        ** test_spi.test_mask_rev_passthrough                                        PASS       11801.00           0.00    7271465.83  **
+                                                        ** test_spi.test_register_write_readback                                     PASS       80401.00           0.01    6218190.14  **
+                                                        ** test_spi.test_address_autoincrement                                       PASS       21401.00           0.00    6629881.80  **
+                                                        ** test_spi.test_csb_resets_spi                                              PASS       20001.00           0.00    6725269.88  **
+                                                        ** test_spi.test_nop_command                                                 PASS       16701.00           0.00    6752345.01  **
+                                                        ** test_sram.test_sram_write_read                                            PASS       23001.00           0.00    6789504.24  **
+                                                        ** test_sram.test_sram_autoincrement_across_256                              PASS       35801.00           0.01    6544922.46  **
+                                                        ** test_sram.test_sram_high_addresses_are_distinct                           PASS       35901.00           0.01    6548856.04  **
+                                                        ** test_sram.test_sram_walking_ones                                          PASS       69601.00           0.01    6494185.72  **
+                                                        ** test_sram.test_sram_read_does_not_disturb                                 PASS       45601.00           0.01    6518388.00  **
+                                                        ** test_sram.test_register_access_after_sram_access                          PASS       21501.00           0.00    6542325.70  **
+                                                        *********************************************************************************************************************************
+                                                        ** TESTS=100 PASS=100 FAIL=0 SKIP=0                                                   7970683.60           1.42    5599682.07  **
+                                                        *********************************************************************************************************************************
+WARNING: chipalooza_frame.bandgap at 890174000: bandgap bias out of range: ibias1_250n = -2.5e-07 A (want -2.5e-07 +/-10%), ibias2_1u = -5e-07 A (want -1e-06)

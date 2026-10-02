@@ -1,0 +1,36 @@
+rm -f results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=diag_cells COCOTB_TESTCASE=  COCOTB_TOPLEVEL=chipalooza_frame TOPLEVEL_LANG=verilog       \
+	 /usr/bin/vvp -m /home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/lib/python3.12/site-packages/cocotb/libs/libcocotbvpi_icarus.so   sim_build/sim.vvp   
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:242  in gpi_load_users                  Loaded entry library: '/usr/lib/x86_64-linux-gnu/libpython3.12.so.1.0'
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:233  in gpi_load_users                  Running entry func 'initialize' from loaded library '/home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/lib/python3.12/site-packages/cocotb/simulator.cpython-312-x86_64-linux-gnu.so'
+     -.--ns INFO     pygpi                              ..ib/pygpi/embed.cpp:114  in initialize                      Using Python 3.12.12 interpreter at /home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/bin/python3
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: VPI support registered
+     0.00ns INFO     cocotb.initialize                  Seeding Python random module with 1790856155
+     0.00ns INFO     cocotb.initialize                  Initialized cocotb v2.1.0 from /home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb.initialize                  Running on Icarus Verilog version 12.0 (stable)
+     0.00ns INFO     cocotb.regression                  Running tests
+     0.00ns INFO     cocotb.regression                  running diag_cells.diag_slot16_cells (1/1)
+ 58466.00ns INFO     cocotb.chipalooza_frame            proj_sel readback = 16
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG lgcp_1.CLK                   = 1
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG lgcp_1.GATE (select)         = 1
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG lgcp_1.delayed_CLK           = Z
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG lgcp_1.delayed_GATE          = Z
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG lgcp_1.GCLK                  = X
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG dlhrq_1.D                    = 1
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG dlhrq_1.GATE (dig_ena)       = 1
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG dlhrq_1.RESET_B (select)     = 1
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG dlhrq_1.delayed_D            = Z
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG dlhrq_1.delayed_GATE         = Z
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG dlhrq_1.delayed_RESET_B      = Z
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG dlhrq_1.Q                    = X
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG user_ena (18 slots)          = 001000000000000000
+ 58466.00ns INFO     cocotb.chipalooza_frame            DIAG user_clk (18 slots)          = XXXXXXXXXXXXXXXXXX
+ 58466.00ns INFO     cocotb.regression                  diag_cells.diag_slot16_cells passed
+ 58466.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** diag_cells.diag_slot16_cells   PASS       58466.00           0.14     410411.57  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0              58466.00           0.14     409785.22  **
+                                                        **************************************************************************************

@@ -1,0 +1,48 @@
+rm -f results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_slot16_smoke COCOTB_TESTCASE=  COCOTB_TOPLEVEL=chipalooza_frame TOPLEVEL_LANG=verilog       \
+	 /home/arjun/eda/tools/iverilog-13/bin/vvp -m /home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/lib/python3.12/site-packages/cocotb/libs/libcocotbvpi_icarus.so   sim_build/sim.vvp   
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:242  in gpi_load_users                  Loaded entry library: '/usr/lib/x86_64-linux-gnu/libpython3.12.so.1.0'
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:233  in gpi_load_users                  Running entry func 'initialize' from loaded library '/home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/lib/python3.12/site-packages/cocotb/simulator.cpython-312-x86_64-linux-gnu.so'
+     -.--ns INFO     pygpi                              ..ib/pygpi/embed.cpp:114  in initialize                      Using Python 3.12.12 interpreter at /home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/bin/python3
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: VPI support registered
+     0.00ns INFO     cocotb.initialize                  Seeding Python random module with 1790856382
+     0.00ns INFO     cocotb.initialize                  Initialized cocotb v2.1.0 from /home/arjun/eda/projects/ADC_IHP/SAR_ADC/sg13cmos5l_ocd_chipalooza/verilog/dv/venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb.initialize                  Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb.regression                  Running tests
+     0.00ns INFO     cocotb.regression                  running test_slot16_smoke.test_slot16_select_enable_and_power (1/7)
+                                                            proj_sel = 16 enables slot 16 only; its 3.3 V / 1.2 V gates deliver power to slot 16 only.
+ 16901.00ns INFO     cocotb.chipalooza_frame            slot 16: enable, vdd_3v3 = 3.30 V, vdd_1v2 = 1.20 V
+ 16901.00ns INFO     cocotb.regression                  test_slot16_smoke.test_slot16_select_enable_and_power passed
+ 16901.00ns INFO     cocotb.regression                  running test_slot16_smoke.test_slot16_clock_is_gated_through (2/7)
+                                                            The slot-16 clock (-> ADC CLK) follows clk_in when selected; the other 17 stay low; it stops on deselect.
+ 34264.00ns INFO     cocotb.regression                  test_slot16_smoke.test_slot16_clock_is_gated_through passed
+ 34264.00ns INFO     cocotb.regression                  running test_slot16_smoke.test_slot16_start_rstn_from_pads_and_constants (3/7)
+                                                            dig_in[0] (START) and dig_in[1] (RSTN) reach slot 16 from pads 0/1 and from the SPI constants.
+172565.00ns INFO     cocotb.regression                  test_slot16_smoke.test_slot16_start_rstn_from_pads_and_constants passed
+172565.00ns INFO     cocotb.regression                  running test_slot16_smoke.test_slot16_start_from_the_sequencer_is_clock_synchronous (4/7)
+                                                            dig_in[0] (START) can come from the sequencer (route code 0xF), which runs on the same master clock.
+240006.00ns INFO     cocotb.regression                  test_slot16_smoke.test_slot16_start_from_the_sequencer_is_clock_synchronous passed
+240006.00ns INFO     cocotb.regression                  running test_slot16_smoke.test_slot16_harness_reset_reaches_slot16 (5/7)
+                                                            The harness 'reset' (active high, synchronised) reaches slot 16 only.  (Unused by the ADC: RSTN is dig_in[1].)
+253779.00ns INFO     cocotb.regression                  test_slot16_smoke.test_slot16_harness_reset_reaches_slot16 passed
+253779.00ns INFO     cocotb.regression                  running test_slot16_smoke.test_slot16_reference_buses (6/7)
+                                                            analog_bus0 (-> vrefp) and analog_bus1 (-> vcm) reach slot 16 from shared pads 0/1 only when enabled.
+275780.01ns INFO     cocotb.chipalooza_frame            slot 16: analog_bus0 = 3.30 V (vrefp), analog_bus1 = 1.65 V (vcm)
+275780.01ns INFO     cocotb.regression                  test_slot16_smoke.test_slot16_reference_buses passed
+275780.01ns INFO     cocotb.regression                  running test_slot16_smoke.test_slot16_outputs_reach_pads_and_spi (7/7)
+                                                            Behavioural stand-in for C0..C9/busy/valid on slot-16 dig_out[0..11] -> daisy chain -> router -> pads and
+395781.01ns INFO     cocotb.regression                  test_slot16_smoke.test_slot16_outputs_reach_pads_and_spi passed
+395781.01ns INFO     cocotb.regression                  *************************************************************************************************************************************
+                                                        ** TEST                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *************************************************************************************************************************************
+                                                        ** test_slot16_smoke.test_slot16_select_enable_and_power                         PASS       16901.00           0.00    3505947.24  **
+                                                        ** test_slot16_smoke.test_slot16_clock_is_gated_through                          PASS       17363.00           0.04     407315.06  **
+                                                        ** test_slot16_smoke.test_slot16_start_rstn_from_pads_and_constants              PASS      138301.00           0.02    6593236.14  **
+                                                        ** test_slot16_smoke.test_slot16_start_from_the_sequencer_is_clock_synchronous   PASS       67441.00           0.18     368130.55  **
+                                                        ** test_slot16_smoke.test_slot16_harness_reset_reaches_slot16                    PASS       13773.00           0.03     432564.59  **
+                                                        ** test_slot16_smoke.test_slot16_reference_buses                                 PASS       22001.00           0.00    5696293.58  **
+                                                        ** test_slot16_smoke.test_slot16_outputs_reach_pads_and_spi                      PASS      120001.00           0.02    6442638.96  **
+                                                        *************************************************************************************************************************************
+                                                        ** TESTS=7 PASS=7 FAIL=0 SKIP=0                                                            395781.01           0.31    1287503.37  **
+                                                        *************************************************************************************************************************************
