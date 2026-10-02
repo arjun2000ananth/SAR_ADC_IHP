@@ -1,0 +1,307 @@
+* PEX produced on Thu Oct  1 10:06:51 AM CEST 2026 using /foss/tools/sak/sak-pex.sh with m=3 and s=1 (extresist threshold=10000 mOhm, minres=1000 mOhm, mindelay=1 ps)
+* NGSPICE file created from strong_arm_comp_pex.ext - technology: ihp-sg13cmos5l
+
+.subckt strong_arm_comp_pex CLK Voutp Voutn vdd vss Vinp Vinn
+X0 vdd CLK a_n3535_6714.t8 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X1 a_n5655_794# Vinp a_n2885_6714.t4 vss.t7 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X2 vdd a_n4185_6714.t15 a_n3535_6714.t4 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X3 vdd a_n4185_6714.t14 a_n3535_6714.t5 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X4 vdd Voutn Voutp vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X5 vss.t25 CLK a_n5655_794# vss.t27 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X6 a_n4835_6714.t5 CLK vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X7 a_n3535_6714.t1 a_n4185_6714.t11 a_n2885_6714.t0 vss.t2 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X8 vss.t25 CLK a_n5655_794# vss.t26 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X9 vdd CLK a_n2885_6714.t7 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X10 Voutp a_n3535_5182# vss.t1 vss.t5 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X11 Voutn Voutp vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X12 vss.t25 CLK a_n5655_794# vss.t24 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X13 vdd CLK a_n4835_6714.t7 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X14 vdd CLK a_n2885_6714.t8 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X15 vdd a_n3535_6714.t14 a_n4185_6714.t5 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X16 a_n2885_6714.t2 Vinp a_n5655_794# vss.t2 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X17 vdd a_n3535_6714.t15 a_n4185_6714.t4 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X18 vdd a_n3535_6714.t13 a_n2885_5182# vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X19 Voutp a_n3535_5182# vss.t17 vss.t11 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X20 a_n4185_6714.t6 CLK vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X21 vss.t29 CLK a_n5655_794# vss.t28 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X22 vdd CLK a_n3535_6714.t9 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X23 Voutp Voutn vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X24 a_n5655_794# Vinp a_n2885_6714.t2 vss.t3 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X25 vdd a_n4185_6714.t13 a_n3535_5182# vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X26 vss.t9 a_n3535_6714.t10 a_n2885_5182# vss.t7 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X27 a_n4835_6714.t0 Vinn a_n5655_794# vss.t8 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X28 a_n4835_6714.t4 a_n3535_6714.t11 a_n4185_6714.t1 vss.t4 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X29 a_n2885_6714.t2 Vinp a_n5655_794# vss.t5 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X30 vdd CLK a_n4835_6714.t8 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X31 Voutn Voutp vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X32 a_n4835_6714.t0 Vinn a_n5655_794# vss.t11 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X33 a_n5655_794# Vinn a_n4835_6714.t1 vss.t4 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X34 a_n4185_6714.t7 CLK vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X35 vdd Voutp Voutn vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X36 a_n3535_6714.t7 CLK vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X37 a_n3535_6714.t0 a_n4185_6714.t16 vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X38 a_n4835_6714.t0 Vinn a_n5655_794# vss.t10 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X39 Voutp Voutn vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X40 a_n3535_6714.t3 a_n4185_6714.t17 vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X41 a_n3535_5182# a_n4185_6714.t12 vss.t1 vss.t0 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X42 a_n4185_6714.t0 a_n3535_6714.t12 a_n4835_6714.t3 vss.t8 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X43 a_n4835_6714.t6 CLK vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X44 vdd CLK a_n4185_6714.t9 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X45 a_n2885_6714.t2 Vinp a_n5655_794# vss.t0 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X46 a_n2885_6714.t6 CLK vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X47 a_n4185_6714.t3 a_n3535_6714.t16 vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X48 vdd Voutn Voutp vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X49 a_n5655_794# CLK vss.t19 vss.t20 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X50 a_n2885_6714.t5 CLK vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X51 a_n4185_6714.t2 a_n3535_6714.t17 vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X52 a_n5655_794# CLK vss.t19 vss.t21 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X53 a_n5655_794# Vinp a_n2885_6714.t3 vss.t6 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X54 vss.t14 a_n2885_5182# Voutn vss.t6 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X55 a_n2885_5182# a_n3535_6714.t18 vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X56 a_n5655_794# CLK vss.t23 vss.t22 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X57 a_n5655_794# Vinn a_n4835_6714.t1 vss.t12 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X58 a_n2885_6714.t1 a_n4185_6714.t10 a_n3535_6714.t2 vss.t3 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X59 a_n3535_6714.t6 CLK vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X60 vdd Voutp Voutn vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X61 vss.t14 a_n2885_5182# Voutn vss.t12 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X62 a_n5655_794# CLK vss.t19 vss.t18 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X63 a_n5655_794# Vinn a_n4835_6714.t2 vss.t13 sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.45u
+X64 vdd CLK a_n4185_6714.t8 vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+X65 a_n3535_5182# a_n4185_6714.t18 vdd vdd sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=0.4u
+R0 vss.t28 vss.t18 363767
+R1 vss.t18 vss.t20 363.784
+R2 vss.t22 vss.t10 363.784
+R3 vss.t10 vss.t0 363.784
+R4 vss.t0 vss.t5 363.784
+R5 vss.t8 vss.t2 363.784
+R6 vss.t2 vss.t3 363.784
+R7 vss.t3 vss.t4 363.784
+R8 vss.t6 vss.t7 363.784
+R9 vss.t7 vss.t13 363.784
+R10 vss.t13 vss.t24 363.784
+R11 vss.t27 vss.t28 363.784
+R12 vss.t20 vss.n18 343.17
+R13 vss.n16 vss.t22 343.17
+R14 vss.t5 vss.n15 343.17
+R15 vss.n13 vss.t8 343.17
+R16 vss.t4 vss.n12 343.17
+R17 vss.n10 vss.t6 343.17
+R18 vss.t24 vss.n6 343.17
+R19 vss.n19 vss.t27 343.17
+R20 vss.n3 vss.n1 5.66562
+R21 vss.n21 vss.n20 22.5341
+R22 vss.n17 vss.n8 22.5341
+R23 vss.n14 vss.n9 22.3641
+R24 vss.n11 vss.n5 22.3641
+R25 vss.n18 vss.t21 20.6149
+R26 vss.n16 vss.t21 20.6149
+R27 vss.n15 vss.t11 20.6149
+R28 vss.n13 vss.t11 20.6149
+R29 vss.n12 vss.t12 20.6149
+R30 vss.n10 vss.t12 20.6149
+R31 vss.t26 vss.n6 20.6149
+R32 vss.n19 vss.t26 20.6149
+R33 vss.n2 vss.n7 19.6988
+R34 vss.n0 vss 18.2557
+R35 vss vss.n0 18.2557
+R36 vss.n0 vss 18.2557
+R37 vss.n2 vss.t1 12.7229
+R38 vss.t9 vss.n7 12.7229
+R39 vss.n8 vss.n3 10.6912
+R40 vss.n4 vss.n21 10.6912
+R41 vss.t19 vss.n3 9.2909
+R42 vss.n4 vss.t29 9.2909
+R43 vss.t25 vss.t23 9.0271
+R44 vss.n20 vss.n19 8.5005
+R45 vss.n20 vss.n6 8.5005
+R46 vss.n17 vss.n16 8.5005
+R47 vss.n18 vss.n17 8.5005
+R48 vss.n14 vss.n13 8.5005
+R49 vss.n15 vss.n14 8.5005
+R50 vss.n11 vss.n10 8.5005
+R51 vss.n12 vss.n11 8.5005
+R52 vss.t17 vss.t14 3.4831
+R53 vss.n9 vss.n8 3.4435
+R54 vss.n21 vss.n5 3.4435
+R55 vss.n9 vss.n5 3.3005
+R56 vss.t29 vss.t25 1.9805
+R57 vss.t23 vss.t19 1.9805
+R58 vss.n7 vss.n4 1.733
+R59 vss.n3 vss.n2 1.733
+R60 vss.t1 vss.t17 1.3205
+R61 vss.t14 vss.t9 1.3205
+R62 vss.n0 vss.n1 5.84703
+R63 vss.n1 vss.n4 5.9389
+R64 a_n2885_6714.t4 a_n2885_6714.t3 22.7496
+R65 a_n2885_6714.n3 a_n2885_6714.t0 22.6449
+R66 a_n2885_6714.n1 a_n2885_6714.t5 22.3252
+R67 a_n2885_6714.n0 a_n2885_6714.t8 22.3248
+R68 a_n2885_6714.n3 a_n2885_6714.t1 21.8023
+R69 a_n2885_6714.n0 a_n2885_6714.t7 21.6098
+R70 a_n2885_6714.n1 a_n2885_6714.t6 21.6098
+R71 a_n2885_6714.n4 a_n2885_6714.n2 14.5555
+R72 a_n2885_6714.t2 a_n2885_6714.n4 9.7705
+R73 a_n2885_6714.n4 a_n2885_6714.n3 9.0192
+R74 a_n2885_6714.n2 a_n2885_6714.n1 2.8572
+R75 a_n2885_6714.n2 a_n2885_6714.n0 1.9772
+R76 a_n2885_6714.t3 a_n2885_6714.t2 1.7792
+R77 a_n3535_6714.n5 a_n3535_6714.t10 35.5607
+R78 a_n3535_6714.n4 a_n3535_6714.t12 34.4641
+R79 a_n3535_6714.n0 a_n3535_6714.t13 34.1032
+R80 a_n3535_6714.n1 a_n3535_6714.t18 34.1032
+R81 a_n3535_6714.n5 a_n3535_6714.t11 33.5807
+R82 a_n3535_6714.n0 a_n3535_6714.t14 33.3882
+R83 a_n3535_6714.n3 a_n3535_6714.t15 33.3882
+R84 a_n3535_6714.n2 a_n3535_6714.t16 33.3882
+R85 a_n3535_6714.n1 a_n3535_6714.t17 33.3882
+R86 a_n3535_6714.t9 a_n3535_6714.n9 24.1411
+R87 a_n3535_6714.n6 a_n3535_6714.t6 24.1402
+R88 a_n3535_6714.n4 a_n3535_6714.t2 22.0995
+R89 a_n3535_6714.n4 a_n3535_6714.t1 22.0995
+R90 a_n3535_6714.n9 a_n3535_6714.t8 21.9948
+R91 a_n3535_6714.n6 a_n3535_6714.t7 21.9948
+R92 a_n3535_6714.n0 a_n3535_6714.t5 21.907
+R93 a_n3535_6714.n3 a_n3535_6714.t4 21.907
+R94 a_n3535_6714.n2 a_n3535_6714.t0 21.907
+R95 a_n3535_6714.n2 a_n3535_6714.t3 21.907
+R96 a_n3535_6714.n8 a_n3535_6714.n7 10.8155
+R97 a_n3535_6714.n7 a_n3535_6714.n5 10.5405
+R98 a_n3535_6714.n7 a_n3535_6714.n3 9.0005
+R99 a_n3535_6714.n8 a_n3535_6714.n6 2.3622
+R100 a_n3535_6714.n3 a_n3535_6714.n0 2.1455
+R101 a_n3535_6714.n2 a_n3535_6714.n1 1.6483
+R102 a_n3535_6714.n3 a_n3535_6714.n2 1.2127
+R103 a_n3535_6714.n5 a_n3535_6714.n4 1.0972
+R104 a_n3535_6714.n9 a_n3535_6714.n8 1.0422
+R105 a_n4185_6714.n5 a_n4185_6714.t12 35.5915
+R106 a_n4185_6714.n3 a_n4185_6714.t13 35.2286
+R107 a_n4185_6714.n1 a_n4185_6714.t18 35.2286
+R108 a_n4185_6714.n3 a_n4185_6714.t14 33.5807
+R109 a_n4185_6714.n2 a_n4185_6714.t15 33.5807
+R110 a_n4185_6714.n0 a_n4185_6714.t16 33.5807
+R111 a_n4185_6714.n1 a_n4185_6714.t17 33.5807
+R112 a_n4185_6714.n4 a_n4185_6714.t10 33.3882
+R113 a_n4185_6714.n5 a_n4185_6714.t11 33.3882
+R114 a_n4185_6714.n6 a_n4185_6714.t6 25.3777
+R115 a_n4185_6714.n7 a_n4185_6714.t9 25.3773
+R116 a_n4185_6714.n4 a_n4185_6714.t1 22.3437
+R117 a_n4185_6714.t5 a_n4185_6714.n3 22.1009
+R118 a_n4185_6714.n0 a_n4185_6714.t4 22.0995
+R119 a_n4185_6714.n0 a_n4185_6714.t3 22.0995
+R120 a_n4185_6714.n1 a_n4185_6714.t2 22.0995
+R121 a_n4185_6714.n5 a_n4185_6714.t0 21.907
+R122 a_n4185_6714.n7 a_n4185_6714.t8 21.8023
+R123 a_n4185_6714.n6 a_n4185_6714.t7 21.8023
+R124 a_n4185_6714.n8 a_n4185_6714.n6 11.2005
+R125 a_n4185_6714.n8 a_n4185_6714.n5 10.5405
+R126 a_n4185_6714.n0 a_n4185_6714.n8 9.0005
+R127 a_n4185_6714.n6 a_n4185_6714.n7 1.9739
+R128 a_n4185_6714.n2 a_n4185_6714.n0 1.733
+R129 a_n4185_6714.n0 a_n4185_6714.n1 1.6252
+R130 a_n4185_6714.n3 a_n4185_6714.n2 1.2127
+R131 a_n4185_6714.n5 a_n4185_6714.n4 1.0972
+R132 a_n4835_6714.n0 a_n4835_6714.t8 27.1923
+R133 a_n4835_6714.n0 a_n4835_6714.t5 27.0244
+R134 a_n4835_6714.t2 a_n4835_6714.t1 23.6846
+R135 a_n4835_6714.n1 a_n4835_6714.t4 23.1311
+R136 a_n4835_6714.n1 a_n4835_6714.t3 22.2511
+R137 a_n4835_6714.n0 a_n4835_6714.t7 22.1873
+R138 a_n4835_6714.n0 a_n4835_6714.t6 22.1873
+R139 a_n4835_6714.n2 a_n4835_6714.n0 14.4972
+R140 a_n4835_6714.t0 a_n4835_6714.n2 10.348
+R141 a_n4835_6714.n2 a_n4835_6714.n1 9.0005
+R142 a_n4835_6714.t1 a_n4835_6714.t0 1.9992
+C0 Voutp a_n2885_5182# 0.17482f
+C1 Voutn a_n2885_5182# 0.88256f
+C2 Voutp a_n3535_5182# 0.56505f
+C3 CLK a_n2885_5182# 0.08575f
+C4 Voutn a_n3535_5182# 0.17773f
+C5 CLK a_n3535_5182# 0.08582f
+C6 a_n5655_794# Vinp 0.26258f
+C7 Voutp Voutn 15.2003f
+C8 CLK Voutp 1.69465f
+C9 CLK Voutn 1.63043f
+C10 Vinn Vinp 6.58671f
+C11 a_n2885_5182# vdd 2.01661f
+C12 CLK a_n5655_794# 2.47847f
+C13 a_n3535_5182# vdd 0.87995f
+C14 Voutp vdd 3.11642f
+C15 CLK Vinn 0.01455f
+C16 Vinn a_n5655_794# 0.26103f
+C17 Voutn vdd 3.10497f
+C18 CLK vdd 6.56592f
+C19 a_n2885_5182# a_n3535_5182# 0.33056f
+C20 Voutn vss 4.62671f
+C21 vdd vss 52.71822f
+C22 a_n5655_794# vss 20.36954f
+C23 a_n3535_5182# vss 1.35386f
+C24 a_n4835_6714.n0 vss 11.6617f
+C25 a_n4835_6714.t1 vss 5.57138f
+C26 a_n4835_6714.t8 vss 1.41718f
+C27 a_n4835_6714.t7 vss 0.87626f
+C28 a_n4835_6714.t6 vss 0.87626f
+C29 a_n4835_6714.t5 vss 1.38774f
+C30 a_n4835_6714.t4 vss 1.24821f
+C31 a_n4835_6714.t3 vss 1.23704f
+C32 a_n4835_6714.n1 vss 2.65456f
+C33 a_n4835_6714.n2 vss 3.25209f
+C34 a_n4835_6714.t0 vss 11.56894f
+C35 a_n4835_6714.t2 vss 0.8557f
+C36 a_n4185_6714.n0 vss 3.5f
+C37 a_n4185_6714.n1 vss 3.90328f
+C38 a_n4185_6714.n2 vss 1.26364f
+C39 a_n4185_6714.n3 vss 3.90331f
+C40 a_n4185_6714.n4 vss 4.22997f
+C41 a_n4185_6714.n5 vss 4.53207f
+C42 a_n4185_6714.n6 vss 5.82699f
+C43 a_n4185_6714.t2 vss 1.3889f
+C44 a_n4185_6714.t9 vss 1.21386f
+C45 a_n4185_6714.t8 vss 0.87563f
+C46 a_n4185_6714.n7 vss 5.31373f
+C47 a_n4185_6714.t6 vss 1.21385f
+C48 a_n4185_6714.t7 vss 0.87563f
+C49 a_n4185_6714.t1 vss 1.45856f
+C50 a_n4185_6714.t0 vss 1.4318f
+C51 a_n4185_6714.n8 vss 2.43253f
+C52 a_n4185_6714.t3 vss 1.3889f
+C53 a_n4185_6714.t4 vss 1.3889f
+C54 a_n4185_6714.t5 vss 1.38886f
+C55 a_n3535_6714.n0 vss 4.01659f
+C56 a_n3535_6714.n1 vss 2.69919f
+C57 a_n3535_6714.n2 vss 3.347f
+C58 a_n3535_6714.n3 vss 2.0296f
+C59 a_n3535_6714.n4 vss 5.05097f
+C60 a_n3535_6714.n5 vss 3.70521f
+C61 a_n3535_6714.t6 vss 1.18848f
+C62 a_n3535_6714.t7 vss 0.96196f
+C63 a_n3535_6714.n6 vss 5.34584f
+C64 a_n3535_6714.t1 vss 1.4471f
+C65 a_n3535_6714.t2 vss 1.4471f
+C66 a_n3535_6714.t5 vss 1.36555f
+C67 a_n3535_6714.t4 vss 1.36555f
+C68 a_n3535_6714.t3 vss 1.36555f
+C69 a_n3535_6714.t0 vss 1.36555f
+C70 a_n3535_6714.n7 vss 2.27415f
+C71 a_n3535_6714.n8 vss 2.02564f
+C72 a_n3535_6714.t8 vss 15.21641f
+C73 a_n3535_6714.n9 vss 4.60474f
+C74 a_n3535_6714.t9 vss 1.18846f
+C75 a_n2885_6714.t8 vss 0.7961f
+C76 a_n2885_6714.t7 vss 0.70971f
+C77 a_n2885_6714.n0 vss 4.17095f
+C78 a_n2885_6714.t5 vss 0.7961f
+C79 a_n2885_6714.t6 vss 0.70971f
+C80 a_n2885_6714.n1 vss 4.58792f
+C81 a_n2885_6714.n2 vss 2.94327f
+C82 a_n2885_6714.t0 vss 1.23917f
+C83 a_n2885_6714.t1 vss 1.18646f
+C84 a_n2885_6714.n3 vss 2.779f
+C85 a_n2885_6714.n4 vss 3.21721f
+C86 a_n2885_6714.t2 vss 9.8126f
+C87 a_n2885_6714.t3 vss 3.82591f
+C88 a_n2885_6714.t4 vss 5.34445f
+C89 vss.t9 vss 0.50052f
+C90 vss.t14 vss 3.80434f
+C91 vss.t1 vss 4.85344f
+.ends
+
