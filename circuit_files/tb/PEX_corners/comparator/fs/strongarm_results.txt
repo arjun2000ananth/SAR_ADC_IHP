@@ -1,0 +1,36 @@
+=============================================
+GF180MCU StrongARM comparator qualification
+For 10-bit SAR ADC check
+=============================================
+.
+Assumed VREF = 3.3 V
+10-bit LSB = 3.22265625 mV
+0.5 LSB = 1.611328125 mV
+.
+---- Nominal transient result VDIFF = +10 mV ----
+Voutp_4ns = 6.37893E-09 V
+Voutn_4ns = 3.3 V
+Voutp_minus_Voutn = -3.3 V
+X_4ns = V
+Y_4ns = V
+P_4ns = V
+Q_4ns = V
+net1_4ns = V
+net2_4ns = V
+net3_4ns = V
+IDD_avg_0_to_5ns = -0.000256625 A
+Pavg_0_to_5ns = 0.000846863 W
+E_0_to_5ns = 4.23432E-12 J
+IDD_eval_1_to_4ns = -0.000124444 A
+Peval_1_to_4ns = 0.000410665 W
+Eeval_1_to_4ns = 1.23199E-12 J
+t_clk_rise = 1.01E-09 s
+t_voutn_fall = s
+td_pos = s
+.
+.
+Additional files generated:
+strongarm_lsb_sweep.txt
+strongarm_delay_sweep.txt
+strongarm_vcm_sweep.txt
+strongarm_vdd_sweep.txt
