@@ -314,12 +314,6 @@ The plots, schematics, and layout views below are stored in [`docs/`](docs/) and
 | <img src="docs/layouts/level_shifter_1v2_to_3v3.png" alt="1.2 V to 3.3 V level shifter" width="470"><br><sub>1.2 V to 3.3 V level shifter</sub> | <img src="docs/layouts/level_shifter_3v3_to_1v2.png" alt="3.3 V to 1.2 V level shifter" width="470"><br><sub>3.3 V to 1.2 V level shifter</sub> |
 | <img src="docs/layouts/sar_fsm_wrapper.png" alt="SAR FSM layout" width="470"><br><sub>SAR FSM layout</sub> |   |
 
-## Circuit Views
-
-| | |
-|:---:|:---:|
-| <img src="docs/comparator.png" alt="Comparator circuit view" width="470"><br><sub>Comparator circuit view</sub> | <img src="docs/dac_SW.png" alt="DAC switch circuit view" width="470"><br><sub>DAC switch circuit view</sub> |
-| <img src="docs/tg.png" alt="Transmission gate circuit view" width="470"><br><sub>Transmission gate circuit view</sub> |   |
 
 ## Schematics
 
